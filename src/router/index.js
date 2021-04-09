@@ -1,7 +1,8 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
-import Index from "../views/Index.vue";
+import CharacterIndex from "../views/CharacterIndex.vue";
+import CharacterCreate from "../views/CharacterCreate.vue";
 
 Vue.use(VueRouter);
 
@@ -12,9 +13,14 @@ const routes = [
     component: Home,
   },
   {
-    path: "/index",
-    name: "Index",
-    component: Index,
+    path: "/Characters",
+    name: "Characters",
+    component: CharacterIndex,
+  },
+  {
+    path: "/Character_Create",
+    name: "Character Creation",
+    component: CharacterCreate,
   },
   {
     path: "/about",

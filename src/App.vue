@@ -5,7 +5,9 @@
       |
       <router-link to="/about">About</router-link>
       |
-      <router-link to="/index">Index</router-link>
+      <router-link to="/Characters">Your Characters</router-link>
+      |
+      <router-link to="/Character_Create">Character Creation</router-link>
     </div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
@@ -33,7 +35,7 @@
               <a class="nav-link active" aria-current="page" href="/About">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/Index">Index</a>
+              <a class="nav-link active" aria-current="page" href="/Character_Create">Character Creation</a>
             </li>
             <li class="nav-item dropdown">
               <a
