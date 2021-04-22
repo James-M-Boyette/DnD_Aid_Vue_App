@@ -1,6 +1,6 @@
-# README || DnD_Aid_app (Vue Front End)
+# README || DnD_Aid_app (Vue Front-end)
 
-## This is the backend to my capstone project for Actualize:
+## This is the front-end to my capstone project for Actualize:
 > (Please note that this is a work-in-progress, and all MVPs + Nice-to-haves will be finalized and delivered for our presentations on May 5th)
 
 ## What will DnD Aid app do?
@@ -16,8 +16,8 @@
 - The ability to create adventuring parties (with the ability to exchange items, resources etc; to view teammate's characters)
 - Links to online resources (encyclopedia articles to aid in more satisfying character-creation + world-building/education)
 - Additional features for Dungeon Masters (DMs)
+- Further front-end polish
 
 ## What does this portion of the app do?
-- This backend supplies users with D&D-specific data for their characters (weapons, race-abilities etc) 
-> via a seeds file populated with data pulled from http://www.dnd5eapi.co/; 
-- Supports multiple front-end actions via RESTful routes.
+- This front-end supplies users with login, character-show, and character-edit pages
+
