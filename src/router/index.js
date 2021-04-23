@@ -3,6 +3,7 @@ import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import CharacterIndex from "../views/CharacterIndex.vue";
 import CharacterCreate from "../views/CharacterCreate.vue";
+import UserSignUp from "../views/UserSignUp.vue";
 
 Vue.use(VueRouter);
 
@@ -21,6 +22,11 @@ const routes = [
     path: "/Character_Create",
     name: "Character Creation",
     component: CharacterCreate,
+  },
+  {
+    path: "/SignUp",
+    name: "User Sign-Up",
+    component: UserSignUp,
   },
   {
     path: "/about",

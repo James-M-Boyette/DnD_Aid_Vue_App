@@ -18,23 +18,23 @@
         <input type="text" v-model="character.clastname" />
       </p>
       <p>
-        raceid:
+        RaceID:
         <input type="text" v-model="character.raceid" />
       </p>
       <p>
-        classid:
+        ClassID:
         <input type="text" v-model="character.classid" />
       </p>
       <p>
-        alignmentid:
+        AlignmentID:
         <input type="text" v-model="character.alignmentid" />
       </p>
       <p>
-        languageid:
+        LanguageID:
         <input type="text" v-model="character.languageid" />
       </p>
       <p>
-        inventoryid:
+        InventoryID:
         <input type="text" v-model="character.inventoryid" />
       </p>
       <p>
@@ -208,6 +208,33 @@ export default {
       // document.querySelector("#character-details").showModal();
       // console.log(this.currentCharacter);
     },
+    // characterUpdate: function (theCharacter) {
+    //   console.log("Let's change stuff about that character!");
+    //   console.log(theCharacter);
+    //   var params = {
+    //     userid: @theCharacter.userid,
+    //     cfirstname: @theCharacter.cfirstname,
+    //     cmiddlename: @theCharacter.cmiddlename,
+    //     clastname: @theCharacter.clastname,
+    //     raceid: @theCharacter.raceid,
+    //     classid: @theCharacter.classid,
+    //     alignmentid: @theCharacter.alignmentid,
+    //     languageid: @theCharacter.languageid,
+    //     inventoryid: @theCharacter.inventoryid,
+    //     strength: @theCharacter.strength,
+    //     dexterity: @theCharacter.dexterity,
+    //     constitution: @theCharacter.constitution,
+    //     intelligence: @theCharacter.intelligence,
+    //     wisdom: @theCharacter.wisdom,
+    //     charisma: @theCharacter.charisma,
+    //     healthmax: @theCharacter.healthmax,
+    //     healthcurrent: @theCharacter.healthcurrent,
+    //     healthtemp: @theCharacter.healthtemp,
+    //     speed: @theCharacter.speed
+    //   },
+    //   axios.patch("/api/recipes/" + theProduct.id, params).then((response) => {
+    //     console.log(response.data);
+    //   }),
   },
 };
 </script>

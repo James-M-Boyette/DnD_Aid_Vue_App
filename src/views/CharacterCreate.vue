@@ -3,8 +3,11 @@
     <h1>{{ message }}</h1>
     <!-- <h3>{{ "Brian's my hero" }}</h3> -->
     <h3>Let's get crackin' - here are your options:</h3>
-    <div v-for="character in characters" v-bind:key="character.index">
+    <!-- <div v-for="character in characters" v-bind:key="character.index"> -->
+    <!-- I think the above just shows all characters in the table on the page ... but we're showing input fields instead on this page anyway o.O -->
+    <div>
       <p>{{ newCharacterCFirstName }} {{ newCharacterCMiddleName }} {{ newCharacterCLastName }}</p>
+      <!-- post "/alignments" -->
       <p>
         First Name:
         <input type="text" v-model="newCharacterCFirstName" />
@@ -77,7 +80,7 @@
         Speed:
         <input type="text" v-model="newCharacterSpeed" />
       </p>
-      <p></p>
+      <p><button v-on:click="characterCreate">Add (create) that new character!</button></p>
       <!-- Bootstrap Modal Button -->
       <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#character-details"> -->
       <!-- More Info
@@ -231,7 +234,7 @@ export default {
         healthtemp: this.newCharacterHealthTemp,
         speed: this.newCharacterSpeed,
       };
-      axios.post("http://localhost:3000/api/products", params).then((response) => {
+      axios.post("http://localhost:3000/api/characters", params).then((response) => {
         console.log(response.data);
         this.characters.push(response.data);
         this.newCharacterCFirstName = "";

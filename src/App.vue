@@ -8,6 +8,8 @@
       <router-link to="/Characters">Your Characters</router-link>
       |
       <router-link to="/Character_Create">Character Creation</router-link>
+      |
+      <router-link to="/SignUp">User Sign-Up</router-link>
     </div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
