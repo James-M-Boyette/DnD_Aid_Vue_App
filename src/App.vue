@@ -7,6 +7,8 @@
       |
       <router-link to="/login">Login</router-link>
       |
+      <router-link to="/logout">Logout</router-link>
+      |
       <router-link to="/Characters">Your Characters</router-link>
       |
       <router-link to="/Character_Create">Character Creation</router-link>

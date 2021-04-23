@@ -5,6 +5,7 @@ import CharacterIndex from "../views/CharacterIndex.vue";
 import CharacterCreate from "../views/CharacterCreate.vue";
 import UserSignUp from "../views/UserSignUp.vue";
 import Login from "../views/Login.vue";
+import Logout from "../views/Logout.vue";
 
 Vue.use(VueRouter);
 
@@ -33,6 +34,11 @@ const routes = [
     path: "/login",
     name: "login",
     component: Login,
+  },
+  {
+    path: "/logout",
+    name: "logout",
+    component: Logout,
   },
   {
     path: "/about",
