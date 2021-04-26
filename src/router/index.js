@@ -3,9 +3,10 @@ import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import CharacterIndex from "../views/CharacterIndex.vue";
 import CharacterCreate from "../views/CharacterCreate.vue";
-import UserSignUp from "../views/UserSignUp.vue";
-import Login from "../views/Login.vue";
-import Logout from "../views/Logout.vue";
+import UserSignUp from "../views/Users/UserSignUp.vue";
+import Login from "../views/Users/Login.vue";
+import Logout from "../views/Users/Logout.vue";
+import Test from "../views/Test.vue";
 
 Vue.use(VueRouter);
 
@@ -26,7 +27,7 @@ const routes = [
     component: CharacterCreate,
   },
   {
-    path: "/SignUp",
+    path: "//SignUp",
     name: "User Sign-Up",
     component: UserSignUp,
   },
@@ -47,6 +48,11 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ "../views/About.vue"),
+  },
+  {
+    path: "/Test",
+    name: "test",
+    component: Test,
   },
 ];
 
