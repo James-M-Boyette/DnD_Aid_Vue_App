@@ -31,6 +31,11 @@ export default {
       errors: [],
     };
   },
+  // How does the Login page create state?
+  // It establishes a function "submit" and emplys it at the end of the template as a primary button (btn)
+  // This function 1) creates a temp variable named "params", 2) establishes two keys (email: password:), 3) refers to the data stored in 'data, variables' (w/ same names) - which were updated via v-mode, and 4) stores our local variable contents in the function variables
+  // Next, using axios, this hash variable 'params' is sent to the route api/sessions, waits for a response, and updates the header with a jwt (+ "bearer" syntax) ... it also stores the jwt locally.
+  // Finally, the user is sent on to the webpage "userProfile" ...
   methods: {
     submit: function () {
       var params = {
@@ -42,8 +47,7 @@ export default {
         .then((response) => {
           axios.defaults.headers.common["Authorization"] = "Bearer " + response.data.jwt;
           localStorage.setItem("jwt", response.data.jwt);
-          this.$router.push("/");
-          this.$router.push("/Characters");
+          this.$router.push("/userProfile");
         })
         .catch((error) => {
           console.log(error.response);

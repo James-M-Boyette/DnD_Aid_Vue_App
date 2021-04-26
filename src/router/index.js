@@ -1,12 +1,13 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
-import CharacterIndex from "../views/CharacterIndex.vue";
-import CharacterCreate from "../views/CharacterCreate.vue";
+import CharacterIndex from "../views/Characters/CharacterIndex.vue";
+import CharacterCreate from "../views/Characters/CharacterCreate.vue";
 import UserSignUp from "../views/Users/UserSignUp.vue";
 import Login from "../views/Users/Login.vue";
 import Logout from "../views/Users/Logout.vue";
 import Test from "../views/Test.vue";
+import UserProfile from "../views/Users/UserProfile.vue";
 
 Vue.use(VueRouter);
 
@@ -27,7 +28,7 @@ const routes = [
     component: CharacterCreate,
   },
   {
-    path: "//SignUp",
+    path: "/SignUp",
     name: "User Sign-Up",
     component: UserSignUp,
   },
@@ -35,6 +36,11 @@ const routes = [
     path: "/login",
     name: "login",
     component: Login,
+  },
+  {
+    path: "/userProfile",
+    name: "profile",
+    component: UserProfile,
   },
   {
     path: "/logout",
