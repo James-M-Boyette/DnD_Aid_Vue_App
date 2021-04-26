@@ -39,26 +39,28 @@
     <!-- NOTE: STICKY TOP BEING USED ... IF YOU WANT A SECOND HEADER ABOVE -->
     <nav class="navbar sticky-top navbar-expand-lg">
       <div class="container-fluid">
+        <!-- Brand (Logo Pic) + link -->
         <a class="navbar-brand" href="/">
-          <img src="./assets/Logo1_(small).png" href="/" alt="" width="110" height="40" />
+          <img src="./assets/Logo1_(small).png" href="/home" alt="" width="110" height="40" />
         </a>
         <!-- DON'T USE THIS ONCE THE SITE IS PRETTIER -->
-        <!-- Here, I've added the basic links from class ... may want to turn them into pretty buttons, or store in a drop-down -->
+        <!-- Router Links (depreciated) -->
         <!-- <router-link to="/">Home</router-link>
-        |
-        <router-link to="/about">About</router-link>
-        |
-        <router-link to="/login">Login</router-link>
-        |
-        <router-link to="/logout">Logout</router-link>
-        |
-        <router-link to="/Characters">Your Characters</router-link>
-        |
-        <router-link to="/Character_Create">Character Creation</router-link>
-        |
-        <router-link to="/SignUp">User Sign-Up</router-link>
-        |
-        <router-link to="/test">test of theme</router-link> -->
+          |
+          <router-link to="/about">About</router-link>
+          |
+          <router-link to="/login">Login</router-link>
+          |
+          <router-link to="/logout">Logout</router-link>
+          |
+          <router-link to="/Characters">Your Characters</router-link>
+          |
+          <router-link to="/Character_Create">Character Creation</router-link>
+          |
+          <router-link to="/SignUp">User Sign-Up</router-link>
+          |
+          <router-link to="/test">test of theme</router-link> -->
+        <!-- Hamberger, I think ... -->
         <button
           class="navbar-toggler"
           type="button"
@@ -73,12 +75,34 @@
         </button>
 
         <!-- Home (Link) -->
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <a class="nav-link" href="/home">Home</a>
           </li>
-        </ul>
-        <!-- Dropdown -->
+        </ul> -->
+        <!-- Home -->
+        <!-- <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/home">Home</a>
+          </li> -->
+
+        <!-- Dropdown : Home -->
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Home
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="/home">Home</a></li>
+            <li><a class="dropdown-item" href="/about">About</a></li>
+          </ul>
+        </li>
+        <!-- Dropdown : Users -->
         <li class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle"
@@ -91,71 +115,39 @@
             Users
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="/">View Profile</a></li>
-            <li><a class="dropdown-item" href="/">Edit Profile</a></li>
+            <li><a class="dropdown-item" href="/SignUp">Join!</a></li>
+            <li><hr class="dropdown-divider" /></li>
+            <li><a class="dropdown-item" href="/userProfile">View Profile</a></li>
+            <li><a class="dropdown-item" href="/userProfile">Edit Profile</a></li>
             <li><a class="dropdown-item" href="/login">Log In</a></li>
             <li><hr class="dropdown-divider" /></li>
             <li><a class="dropdown-item" href="/logout">Log Out</a></li>
           </ul>
         </li>
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" href="/home">Home</a>
-          </li>
-        </ul>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <!-- Home -->
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="/home">Home</a>
-            </li>
-            <!-- About -->
-            <li class="nav-item">
-              <a class="nav-link" href="/About">About</a>
-            </li>
-            <!-- User Creation -->
-            <li class="nav-item">
-              <a class="nav-link" href="/sign-up">Sign-up</a>
-            </li>
-            <!-- User Login -->
-            <li class="nav-item">
-              <a class="nav-link" href="/login">Log-in</a>
-            </li>
-            <!-- User Log-out -->
-            <li class="nav-item">
-              <a class="nav-link" href="/logout">Log-out</a>
-            </li>
-            <!-- Character Index -->
-            <li class="nav-item">
-              <a class="nav-link" href="/Characters">My Characters</a>
-            </li>
-            <!-- Character Show -->
-            <li class="nav-item">
-              <a class="nav-link" href="/Character_Create">Create a Character</a>
-            </li>
-            <!-- DROP DOWN ... MAYBE USE SOMEPLACE LATER -->
-            <!-- <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Dropdown
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider" /></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li> -->
+
+        <!-- Dropdown : Characters -->
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Characters
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="/Characters">View Your Characters</a></li>
+            <li><a class="dropdown-item" href="/Character_Create">Create New Character</a></li>
           </ul>
+        </li>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
           <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-            <button class="btn btn-outline-success" type="submit">Search</button>
+            <!-- Search + Button -->
+            <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+            <button class="btn btn-outline-success" type="submit">Search</button> -->
           </form>
         </div>
       </div>
