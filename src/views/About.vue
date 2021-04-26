@@ -8,5 +8,12 @@
       user profile, and then use their character sheets as refrence during campaigns. Ideally, this app will grow to
       include campaign, party, and specialty Dungeon Master pages as well.
     </h3>
+    <!-- <img src="@/assets/Backgrounds/Black_Market_Entrance_(Hamsterfly).jpg" /> -->
   </div>
 </template>
+
+<style>
+body {
+  background-image: url("/assets/Backgrounds/Black_Market_Entrance_(Hamsterfly).jpg");
+}
+</style>

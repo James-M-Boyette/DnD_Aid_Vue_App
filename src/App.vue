@@ -142,6 +142,65 @@
             <li><a class="dropdown-item" href="/Character_Create">Create New Character</a></li>
           </ul>
         </li>
+        <!-- Dropdown : Campaigns -->
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Campaigns
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="/test">Create a Campaign!</a></li>
+            <li><hr class="dropdown-divider" /></li>
+            <li><a class="dropdown-item" href="/test">Join, Resume, Leave</a></li>
+          </ul>
+        </li>
+        <!-- Dropdown : Parties -->
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Parties
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="/test">Create a Party!</a></li>
+            <li><hr class="dropdown-divider" /></li>
+            <li><a class="dropdown-item" href="/test">Join, Resume, Leave</a></li>
+          </ul>
+        </li>
+        <!-- Dropdown : Encyclopedia -->
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Encyclopedia
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="http://dnd5e.wikidot.com/" target="_blank">DnD5e Wiki</a></li>
+            <li><hr class="dropdown-divider" /></li>
+            <li><a class="dropdown-item" href="http://dnd5e.wikidot.com/#toc1" target="_blank">Spells</a></li>
+            <li><a class="dropdown-item" href="http://dnd5e.wikidot.com/#toc63" target="_blank">Items</a></li>
+            <li><a class="dropdown-item" href="http://dnd5e.wikidot.com/#toc20" target="_blank">Classes</a></li>
+            <li><a class="dropdown-item" href="http://dnd5e.wikidot.com/#toc3" target="_blank">Races</a></li>
+            <li><a class="dropdown-item" href="http://dnd5e.wikidot.com/#toc64" target="_blank">Feats</a></li>
+            <li><a class="dropdown-item" href="http://dnd5e.wikidot.com/#toc13" target="_blank">Backgrounds</a></li>
+          </ul>
+        </li>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
           <form class="d-flex">
@@ -153,6 +212,8 @@
       </div>
     </nav>
     <router-view />
+    <img src="@/assets/Backgrounds/Black_Market_Entrance_(Hamsterfly).jpg" />
+    <div></div>
   </div>
 </template>
 
