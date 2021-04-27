@@ -45,7 +45,7 @@ export default {
       newUFirstName: "Your first name",
       newULastName: "Your last name",
       email: "Your email",
-      username: "Your username",
+      // username: "Your username",
       password: "Your new password",
       passwordConfirmation: "Please re-type your password",
       errors: [],
