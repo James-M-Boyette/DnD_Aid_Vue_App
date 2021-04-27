@@ -63,7 +63,7 @@
       </p>
       <p>
         Current Health:
-        <input type="text" v-model="character.cfirstname" />
+        <input type="text" v-model="character.healthcurrent" />
       </p>
       <p>
         Max Health:
@@ -147,7 +147,38 @@
   </div>
 </template>
 
-<style></style>
+<style data-jss="">
+@media (min-width: 768px) {
+  html body.body-rpgcharacter-sheet {
+    background: url(https://www.dndbeyond.com/avatars/61/471/636453122222914252.jpeg) no-repeat center 141px,
+      url(https://media-waterdeep.cursecdn.com/attachments/0/84/background_texture.png) #f9f9f9;
+  }
+}
+@media (min-width: 1024px) {
+  html body.body-rpgcharacter-sheet {
+    background: url(https://www.dndbeyond.com/avatars/61/471/636453122222914252.jpeg) no-repeat center 208px,
+      url(https://media-waterdeep.cursecdn.com/attachments/0/84/background_texture.png) #f9f9f9;
+  }
+}
+@media (min-width: 1200px) {
+  html body.body-rpgcharacter-sheet {
+    background: url(https://www.dndbeyond.com/avatars/61/471/636453122222914252.jpeg) no-repeat center 230px,
+      url(https://media-waterdeep.cursecdn.com/attachments/0/84/background_texture.png) #f9f9f9;
+  }
+}
+@media (min-width: 1921px) {
+  html body.body-rpgcharacter-sheet {
+    background: url(https://www.dndbeyond.com/avatars/61/472/636453122223383028.jpeg) no-repeat center 230px,
+      url(https://media-waterdeep.cursecdn.com/attachments/0/84/background_texture.png) #f9f9f9;
+  }
+}
+@media (min-width: 2561px) {
+  html body.body-rpgcharacter-sheet {
+    background: url(https://www.dndbeyond.com/avatars/61/473/636453122224164304.jpeg) no-repeat center 230px,
+      url(https://media-waterdeep.cursecdn.com/attachments/0/84/background_texture.png) #f9f9f9;
+  }
+}
+</style>
 
 <script>
 import axios from "axios";
