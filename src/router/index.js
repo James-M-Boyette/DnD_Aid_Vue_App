@@ -2,6 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import CharacterIndex from "../views/Characters/CharacterIndex.vue";
+import CharacterShow from "../views/Characters/CharacterShow.vue";
 import CharacterCreate from "../views/Characters/CharacterCreate.vue";
 import UserSignUp from "../views/Users/UserSignUp.vue";
 import Login from "../views/Users/Login.vue";
@@ -18,17 +19,22 @@ const routes = [
     component: Home,
   },
   {
-    path: "/Characters",
+    path: "/characters",
     name: "Characters",
     component: CharacterIndex,
   },
   {
-    path: "/Character_Create",
+    path: "/your_character",
+    name: "Character",
+    component: CharacterShow,
+  },
+  {
+    path: "/character_create",
     name: "Character Creation",
     component: CharacterCreate,
   },
   {
-    path: "/SignUp",
+    path: "/sign_up",
     name: "User Sign-Up",
     component: UserSignUp,
   },
@@ -38,7 +44,7 @@ const routes = [
     component: Login,
   },
   {
-    path: "/userProfile",
+    path: "/user_profile",
     name: "profile",
     component: UserProfile,
   },
@@ -56,7 +62,7 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ "../views/About.vue"),
   },
   {
-    path: "/Test",
+    path: "/test",
     name: "test",
     component: Test,
   },

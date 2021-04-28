@@ -141,10 +141,10 @@
             Users
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="/SignUp">Join!</a></li>
+            <li><a class="dropdown-item" href="/sign_up">Join!</a></li>
             <li><hr class="dropdown-divider" /></li>
-            <li><a class="dropdown-item" href="/userProfile">View Profile</a></li>
-            <li><a class="dropdown-item" href="/userProfile">Edit Profile</a></li>
+            <li><a class="dropdown-item" href="/user_profile">View Profile</a></li>
+            <li><a class="dropdown-item" href="/user_profile">Edit Profile</a></li>
             <li><a class="dropdown-item" href="/login">Log In</a></li>
             <li><hr class="dropdown-divider" /></li>
             <li><a class="dropdown-item" href="/logout">Log Out</a></li>
@@ -164,8 +164,8 @@
             Characters
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="/Characters">View Your Characters</a></li>
-            <li><a class="dropdown-item" href="/Character_Create">Create New Character</a></li>
+            <li><a class="dropdown-item" href="/characters">View Your Characters</a></li>
+            <li><a class="dropdown-item" href="/character_create">Create New Character</a></li>
           </ul>
         </li>
         <!-- Dropdown : Campaigns -->
@@ -261,7 +261,37 @@ All the links inside the <ul class=”navbar-nav mr-auto nav”> are styled by t
   /* background-repeat: no-repeat; */
   /* background-color: red; */
 }
-
+/* data-jss="" */
+@media (min-width: 768px) {
+  html body.body-rpgcharacter-sheet {
+    background: url(https://www.dndbeyond.com/avatars/61/471/636453122222914252.jpeg) no-repeat center 141px,
+      url(https://media-waterdeep.cursecdn.com/attachments/0/84/background_texture.png) #f9f9f9;
+  }
+}
+@media (min-width: 1024px) {
+  html body.body-rpgcharacter-sheet {
+    background: url(https://www.dndbeyond.com/avatars/61/471/636453122222914252.jpeg) no-repeat center 208px,
+      url(https://media-waterdeep.cursecdn.com/attachments/0/84/background_texture.png) #f9f9f9;
+  }
+}
+@media (min-width: 1200px) {
+  html body.body-rpgcharacter-sheet {
+    background: url(https://www.dndbeyond.com/avatars/61/471/636453122222914252.jpeg) no-repeat center 230px,
+      url(https://media-waterdeep.cursecdn.com/attachments/0/84/background_texture.png) #f9f9f9;
+  }
+}
+@media (min-width: 1921px) {
+  html body.body-rpgcharacter-sheet {
+    background: url(https://www.dndbeyond.com/avatars/61/472/636453122223383028.jpeg) no-repeat center 230px,
+      url(https://media-waterdeep.cursecdn.com/attachments/0/84/background_texture.png) #f9f9f9;
+  }
+}
+@media (min-width: 2561px) {
+  html body.body-rpgcharacter-sheet {
+    background: url(https://www.dndbeyond.com/avatars/61/473/636453122224164304.jpeg) no-repeat center 230px,
+      url(https://media-waterdeep.cursecdn.com/attachments/0/84/background_texture.png) #f9f9f9;
+  }
+}
 #nav {
   padding: 30px;
   font-weight: bold;
