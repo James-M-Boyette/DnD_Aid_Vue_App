@@ -19,7 +19,7 @@ const routes = [
     component: CharacterIndex,
   },
   {
-    path: "/your_character",
+    path: "/your_character/:id",
     name: "Character",
     component: CharacterShow,
   },

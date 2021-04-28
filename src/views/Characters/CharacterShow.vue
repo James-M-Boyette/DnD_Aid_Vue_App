@@ -8,7 +8,9 @@
         <h1 class="display-3">Welcome back USERNAME !</h1>
         <h3>Here are your current characters:</h3>
         <!-- This is a button to _ -->
-        <a href="/character_create" class="btn btn-primary btn-lg" target="”_blank”">Create a new character!</a>
+        <a href="/characters" class="btn btn-danger btn-lg">See all of your characters!</a>
+        <a href="/character_create" class="btn btn-danger btn-lg">Create a new character!</a>
+        <!-- target="_blank" -->
       </header>
     </div>
     <div class="container"></div>
@@ -90,7 +92,7 @@ export default {
     };
   },
   created: function () {
-    console.log("Fetching all the characters automatically ...");
+    console.log("Fetching this character's info automatically ...");
     console.log(this.$route.params.id);
     axios.get(`/api/characters/${this.$route.params.id}`).then((response) => {
       console.log(response.data);
@@ -103,6 +105,7 @@ export default {
       // Make a GET request to "/api/photos/" + this.$route.params.id
       axios.get(`/api/characters"${this.$route.params.id}`).then((response) => {
         console.log(response.data);
+        this.theCharacter = response.data;
       });
       console.log(theCharacter);
       // this.currentCharacter = theCharacter;

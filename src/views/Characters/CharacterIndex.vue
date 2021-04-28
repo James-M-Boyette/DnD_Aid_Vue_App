@@ -8,7 +8,9 @@
         <h1 class="display-3">Welcome back USERNAME !</h1>
         <h3>Here are your current characters:</h3>
         <!-- This is a button to _ -->
-        <a href="/character_create" class="btn btn-primary btn-lg" target="”_blank”">Create a new character!</a>
+        <a href="/characters" class="btn btn-danger btn-lg">See all of your characters!</a>
+        <a href="/character_create" class="btn btn-danger btn-lg">Create a new character!</a>
+        <!-- target="_blank" -->
       </header>
     </div>
     <div class="container">
@@ -30,9 +32,9 @@
                 </p>
               </div>
               <div class="card-footer">
-                <a href="/your_character" v-bind:to="`/characters/${character.id}`" class="btn btn-danger">
-                  Stay a'while, n listen!
-                </a>
+                <!-- <a class="btn btn-danger" href="/your_character" v-bind:to="`/characters/${character.id}`" > -->
+                <!-- <a class="btn btn-danger" v-bind:href="`/your_character/`+character.id">Stay a'while, n listen!</a> -->
+                <a class="btn btn-danger" v-bind:href="`/your_character/${character.id}`">Stay a'while, n listen!</a>
               </div>
             </div>
           </div>
@@ -135,6 +137,7 @@ export default {
     return {
       message: "Welcome to your previously-saved characters page!",
       characters: {},
+      characterID: "",
       userid: "",
       cfirstname: "",
       cmiddlename: "",
