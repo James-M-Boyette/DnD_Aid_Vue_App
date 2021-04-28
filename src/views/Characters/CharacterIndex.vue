@@ -1,8 +1,38 @@
 <template>
   <div class="index">
-    <h1>{{ message }}</h1>
+    <!-- <h1>{{ message }}</h1> -->
     <!-- <h3>{{ "Brian's my hero" }}</h3> -->
-    <h3>Here are your current characters:</h3>
+    <div class="container">
+      <!-- Jumbotron Header -->
+      <header class="jumbotron my-4">
+        <h1 class="display-3">Welcome back USERNAME !</h1>
+        <h3>Here are your current characters:</h3>
+        <!-- This is a button to _ -->
+        <a href="/Character_Create" class="btn btn-primary btn-lg" target="”_blank”">Create a new character!</a>
+      </header>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card h-100">
+            <!-- <img class="background" src="@/assets/Character_Avatars/Blue_Eyes_(Cristi-B).jpg" alt="" /> -->
+            <!-- <img class="avatar" src="@/assets/Character_Avatars/Blue_Eyes_(Cristi-B).jpg" alt="" /> -->
+            <img class="background" src="@/assets/Character_Avatars/Blue_Eyes_(Cristi-B).jpg" alt="" />
+            <!-- <img class="background" v-bind:src="character.avatar_img" alt="..." /> -->
+            <div class="card-body">
+              <h4 class="card-title">Card title</h4>
+              <p class="card-text">
+                Some flavor text should go here ... maybe race class etc? Or an "intro" section the user writes when
+                creating?
+              </p>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="btn btn-danger">Stay a'while, n listen!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div v-for="character in characters" v-bind:key="character.index">
       <p>{{ character.cfirstname }} {{ character.cmiddlename }} {{ character.clastname }}</p>
       <p>
@@ -143,6 +173,7 @@
         </p>
       </form>
     </dialog> -->
+
     <div></div>
   </div>
 </template>
@@ -177,6 +208,22 @@
     background: url(https://www.dndbeyond.com/avatars/61/473/636453122224164304.jpeg) no-repeat center 230px,
       url(https://media-waterdeep.cursecdn.com/attachments/0/84/background_texture.png) #f9f9f9;
   }
+}
+.background {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 250px;
+  height: 250px;
+  border-radius: 25%;
+}
+
+.avatar {
+  vertical-align: middle;
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 25%;
 }
 </style>
 

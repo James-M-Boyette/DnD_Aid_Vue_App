@@ -110,9 +110,6 @@
           </li>
         </ul> -->
         <!-- Home -->
-        <!-- <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="/home">Home</a>
-          </li> -->
 
         <!-- Dropdown : Home -->
         <li class="nav-item dropdown">
@@ -233,10 +230,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
         </div>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/test">!! Test !!</a>
+        </li>
       </div>
     </nav>
     <router-view />
-    <img class="Background" src="@/assets/Backgrounds/Black_Market_Entrance_(Hamsterfly).jpg" />
+    <!-- <img class="Background" src="@/assets/Backgrounds/Black_Market_Entrance_(Hamsterfly).jpg" /> -->
     <div></div>
   </div>
 </template>
@@ -248,11 +248,18 @@ but OTHER styling such as background colours etc will apply to the whole navbar
 
 All the links inside the <ul class=”navbar-nav mr-auto nav”> are styled by the nav element itself, trying to change these on the navbar will not work! */
 #app {
+  /* font-family entries list back-up fonts ... in case the user doesn't have the first. Worth find top 3 DnD-esque fonts that are popular and putting them here:  https://www.cssfontstack.com/*/
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  /* The file needed to be in Cammel case to work ... also I didn't have the .jpg initially o.O */
+  /* Also ... do we really want to random this? The Text we're showing on various pages, the brand styling ... at most, we should have all images with the same general Hue, value */
+  background-image: url("~@/assets/Backgrounds/BlackMarketEntranceHamsterfly.jpg");
+  background-size: 100%;
+  /* background-repeat: no-repeat; */
+  /* background-color: red; */
 }
 
 #nav {

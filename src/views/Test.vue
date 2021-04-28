@@ -74,9 +74,7 @@
             <img class="character1" src="http://placehold.it/500x325" alt="Character" />
             <div class="card-body">
               <h4 class="card-title">Card title</h4>
-              <p class="card-text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.
-              </p>
+              <p class="card-text">Rounded Photo</p>
             </div>
             <div class="card-footer">
               <a href="#" class="btn btn-primary">See more ...</a>
@@ -86,31 +84,18 @@
 
         <div class="col-lg-3 col-md-6 mb-4">
           <div class="card h-100">
-            <img class="card-img-top" src="/assets/Logo1_(small).png" alt="" />
+            <!-- <img class="background" src="@/assets/Character_Avatars/Blue_Eyes_(Cristi-B).jpg" alt="" /> -->
+            <!-- <img class="avatar" src="@/assets/Character_Avatars/Blue_Eyes_(Cristi-B).jpg" alt="" /> -->
+            <img class="background" src="@/assets/Character_Avatars/Blue_Eyes_(Cristi-B).jpg" alt="" />
             <div class="card-body">
               <h4 class="card-title">Card title</h4>
               <p class="card-text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo magni sapiente, tempore debitis
-                beatae culpa natus architecto.
+                Some flavor text should go here ... maybe race class etc? Or an "intro" section the user writes when
+                creating?
               </p>
             </div>
             <div class="card-footer">
-              <a href="#" class="btn btn-primary">See more ...</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 mb-4">
-          <div class="card h-100">
-            <img class="card-img-top" src="http://placehold.it/500x325" alt="" />
-            <div class="card-body">
-              <h4 class="card-title">Card title</h4>
-              <p class="card-text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.
-              </p>
-            </div>
-            <div class="card-footer">
-              <a href="#" class="btn btn-primary">See more ...</a>
+              <a href="#" class="btn btn-danger">Stay a'while, n listen!</a>
             </div>
           </div>
         </div>
@@ -121,12 +106,24 @@
             <div class="card-body">
               <h4 class="card-title">Card title</h4>
               <p class="card-text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo magni sapiente, tempore debitis
-                beatae culpa natus architecto.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.
               </p>
             </div>
             <div class="card-footer">
-              <a href="#" class="btn btn-primary">See more ...</a>
+              <a href="#" class="btn btn-danger">See more ...</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card h-100">
+            <img class="card-img-top" src="http://placehold.it/500x325" alt="" />
+            <div class="card-body">
+              <h4 class="card-title">Card title</h4>
+              <p class="card-text">Square Photo</p>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="btn btn-primary">More, you say?</a>
             </div>
           </div>
         </div>
@@ -154,6 +151,23 @@
   vertical-align: middle;
   width: 200px;
   height: 200px;
+  border-radius: 25%;
+}
+
+.background {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 250px;
+  height: 250px;
+  border-radius: 25%;
+}
+
+.avatar {
+  vertical-align: middle;
+  position: absolute;
+  width: 150px;
+  height: 150px;
   border-radius: 25%;
 }
 </style>
