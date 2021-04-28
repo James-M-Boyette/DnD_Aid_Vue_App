@@ -64,7 +64,7 @@
         <h1 class="display-3">Welcome back USERNAME !</h1>
         <p class="lead">Your characters are below ...</p>
         <!-- This is a button to _ -->
-        <a href="/Character_Create" class="btn btn-primary btn-lg" target="”_blank”">Create a new character!</a>
+        <a href="/character_create" class="btn btn-primary btn-lg" target="”_blank”">Create a new character!</a>
       </header>
 
       <!-- Page Features -->

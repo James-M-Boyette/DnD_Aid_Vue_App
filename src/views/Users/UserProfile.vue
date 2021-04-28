@@ -8,25 +8,30 @@
     <div>
       <p>
         First Name:
-        <input type="text" v-model="uFirstName" />
+        <!-- <input type="text" v-model="currentUser.ufirstname" /> -->
+        {{ currentUser.ufirstname }}
       </p>
       <p>
         Last Name:
-        <input type="text" v-model="uLastName" />
+        <!-- <input type="text" v-model="currentUser.ulastname" /> -->
+        {{ currentUser.ulastname }}
       </p>
       <p>
         E-mail:
-        <input type="text" v-model="email" />
+        <!-- <input type="text" v-model="currentUser.email" /> -->
+        {{ currentUser.email }}
       </p>
       <p>
         Password:
-        <input type="text" v-model="password" />
+        <!-- <input type="text" v-model="currentUser.password" /> -->
+        {{ currentUser.password }}
       </p>
       <p>
         Password Confirmation:
-        <input type="text" v-model="password_confirmation" />
+        <!-- <input type="text" v-model="currentUser.password_confirmation" /> -->
+        {{ currentUser.password_confirmation }}
       </p>
-
+      <!-- Add Modal for editing -->
       <p><button v-on:click="userUpdate">Update your profile!</button></p>
       <p><button v-on:click="userDestory">Delete your profile (Please be certain!)</button></p>
     </div>
@@ -52,7 +57,12 @@ export default {
   },
   created: function () {
     console.log("Getting your profile info automatically ...");
-    this.userShow();
+    console.log(this.$route.params.id);
+    // axios.get(`/api/users/current_user"${this.$route.params.id}`).then((response) => {
+    axios.get("/api/users/current_user").then((response) => {
+      console.log(response.data);
+      this.currentUser = response.data;
+    });
   },
   methods: {
     userShow: function (theUser) {

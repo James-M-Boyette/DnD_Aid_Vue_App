@@ -8,29 +8,29 @@
         <h1 class="display-3">Welcome back USERNAME !</h1>
         <h3>Here are your current characters:</h3>
         <!-- This is a button to _ -->
-        <a href="/Character_Create" class="btn btn-primary btn-lg" target="”_blank”">Create a new character!</a>
+        <a href="/character_create" class="btn btn-primary btn-lg" target="”_blank”">Create a new character!</a>
       </header>
     </div>
+    <div class="container"></div>
     <div class="container">
+      <!-- Completely change this to a simple theme display -->
       <div class="row">
-        <div v-for="character in characters" v-bind:key="character.index">
-          <div class="col-lg-3 col-md-6 mb-4">
-            <div class="card h-100">
-              <!-- <img class="background" src="@/assets/Character_Avatars/Blue_Eyes_(Cristi-B).jpg" alt="" /> -->
-              <!-- <img class="avatar" src="@/assets/Character_Avatars/Blue_Eyes_(Cristi-B).jpg" alt="" /> -->
-              <img class="background" src="@/assets/Character_Avatars/Blue_Eyes_(Cristi-B).jpg" alt="" />
-              <!-- <img class="background" v-bind:src="character.avatar_img" alt="..." /> -->
-              <div class="card-body">
-                <h4 class="card-title">
-                  {{ character.cfirstname }} {{ character.cmiddlename }} {{ character.clastname }}
-                </h4>
-                <p class="card-text">
-                  {{ character.origin_story }}
-                </p>
-              </div>
-              <div class="card-footer">
-                <a href="#" class="btn btn-danger">Stay a'while, n listen!</a>
-              </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card h-100">
+            <!-- <img class="background" src="@/assets/Character_Avatars/Blue_Eyes_(Cristi-B).jpg" alt="" /> -->
+            <!-- <img class="avatar" src="@/assets/Character_Avatars/Blue_Eyes_(Cristi-B).jpg" alt="" /> -->
+            <img class="background" src="@/assets/Character_Avatars/Blue_Eyes_(Cristi-B).jpg" alt="" />
+            <!-- <img class="background" v-bind:src="character.avatar_img" alt="..." /> -->
+            <div class="card-body">
+              <h4 class="card-title">
+                {{ theCharacter.cfirstname }} {{ theCharacter.cmiddlename }} {{ theCharacter.clastname }}
+              </h4>
+              <p class="card-text">
+                {{ theCharacter.origin_story }}
+              </p>
+            </div>
+            <div class="card-footer">
+              <div></div>
             </div>
           </div>
         </div>
@@ -66,7 +66,7 @@ export default {
   data: function () {
     return {
       message: "Welcome to your previously-saved characters page!",
-      characters: {},
+      theCharacter: {},
       userid: "",
       cfirstname: "",
       cmiddlename: "",
@@ -87,19 +87,25 @@ export default {
       healthtemp: "",
       speed: "",
       origin_story: "",
-      currentCharacter: [],
     };
   },
   created: function () {
     console.log("Fetching all the characters automatically ...");
-    this.charactersShow();
-    // I got this right, except I console.logged it rather than running it as a method
+    console.log(this.$route.params.id);
+    axios.get(`/api/characters/${this.$route.params.id}`).then((response) => {
+      console.log(response.data);
+      this.theCharacter = response.data;
+    });
   },
   methods: {
     charactersShow: function (theCharacter) {
       console.log("CharactersShow action is executing ...");
+      // Make a GET request to "/api/photos/" + this.$route.params.id
+      axios.get(`/api/characters"${this.$route.params.id}`).then((response) => {
+        console.log(response.data);
+      });
       console.log(theCharacter);
-      this.currentCharacter = theCharacter;
+      // this.currentCharacter = theCharacter;
       // document.querySelector("#character-details").showModal();
       // console.log(this.currentCharacter);
     },

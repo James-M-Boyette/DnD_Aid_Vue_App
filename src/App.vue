@@ -10,9 +10,9 @@
       |
       <router-link to="/logout">Logout</router-link>
       |
-      <router-link to="/Characters">Your Characters</router-link>
+      <router-link to="/character/:id">Your Characters</router-link>
       |
-      <router-link to="/Character_Create">Character Creation</router-link>
+      <router-link to="/character_create">Character Creation</router-link>
       |
       <router-link to="/SignUp">User Sign-Up</router-link>
       |
@@ -82,9 +82,9 @@
           |
           <router-link to="/logout">Logout</router-link>
           |
-          <router-link to="/Characters">Your Characters</router-link>
+          <router-link to="/character/:id">Your Characters</router-link>
           |
-          <router-link to="/Character_Create">Character Creation</router-link>
+          <router-link to="/character_create">Character Creation</router-link>
           |
           <router-link to="/SignUp">User Sign-Up</router-link>
           |

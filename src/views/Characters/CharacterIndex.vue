@@ -14,6 +14,7 @@
     <div class="container">
       <div class="row">
         <div v-for="character in characters" v-bind:key="character.index">
+          <!-- <router-link v-bind:to="`/characters/${character.id}`"></router-link> -->
           <div class="col-lg-3 col-md-6 mb-4">
             <div class="card h-100">
               <!-- <img class="background" src="@/assets/Character_Avatars/Blue_Eyes_(Cristi-B).jpg" alt="" /> -->
@@ -29,7 +30,9 @@
                 </p>
               </div>
               <div class="card-footer">
-                <a href="/your_character" class="btn btn-danger">Stay a'while, n listen!</a>
+                <a href="/your_character" v-bind:to="`/characters/${character.id}`" class="btn btn-danger">
+                  Stay a'while, n listen!
+                </a>
               </div>
             </div>
           </div>
