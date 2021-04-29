@@ -72,23 +72,7 @@
         <!-- <a class="navbar-brand" href="/">
           <img src="./assets/Logo1_(small).png" href="/home" alt="" width="110" height="40" />
         </a> -->
-        <!-- DON'T USE THIS ONCE THE SITE IS PRETTIER -->
-        <!-- Router Links (depreciated) -->
-        <!-- <router-link to="/">Home</router-link>
-          |
-          <router-link to="/about">About</router-link>
-          |
-          <router-link to="/login">Login</router-link>
-          |
-          <router-link to="/logout">Logout</router-link>
-          |
-          <router-link to="/character/:id">Your Characters</router-link>
-          |
-          <router-link to="/character_create">Character Creation</router-link>
-          |
-          <router-link to="/SignUp">User Sign-Up</router-link>
-          |
-          <router-link to="/test">test of theme</router-link> -->
+
         <!-- Hamberger, I think ... -->
         <button
           class="navbar-toggler"
@@ -233,10 +217,24 @@
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="/test">!! Test !!</a>
         </li>
+        <!-- User Sign-Up/Login -->
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a class="glyphicon glyphicon-user" href="#">
+              <span></span>
+              Sign Up
+            </a>
+          </li>
+          <li>
+            <a class="glyphicon glyphicon-log-in" href="">
+              <span></span>
+              Login
+            </a>
+          </li>
+        </ul>
       </div>
     </nav>
     <router-view />
-    <!-- <img class="Background" src="@/assets/Backgrounds/Black_Market_Entrance_(Hamsterfly).jpg" /> -->
     <div></div>
   </div>
 </template>
@@ -256,42 +254,16 @@ All the links inside the <ul class=”navbar-nav mr-auto nav”> are styled by t
   color: #2c3e50;
   /* The file needed to be in Cammel case to work ... also I didn't have the .jpg initially o.O */
   /* Also ... do we really want to random this? The Text we're showing on various pages, the brand styling ... at most, we should have all images with the same general Hue, value */
-  background-image: url("~@/assets/Backgrounds/BlackMarketEntranceHamsterfly.jpg");
+  background-image: url("~@/assets/Imgs/Backgrounds/BlackMarketEntranceHamsterfly.jpg");
   background-size: 100%;
   /* background-repeat: no-repeat; */
   /* background-color: red; */
 }
-/* data-jss="" */
-@media (min-width: 768px) {
-  html body.body-rpgcharacter-sheet {
-    background: url(https://www.dndbeyond.com/avatars/61/471/636453122222914252.jpeg) no-repeat center 141px,
-      url(https://media-waterdeep.cursecdn.com/attachments/0/84/background_texture.png) #f9f9f9;
-  }
+
+.navbar-custom {
+  color: #ffffff;
 }
-@media (min-width: 1024px) {
-  html body.body-rpgcharacter-sheet {
-    background: url(https://www.dndbeyond.com/avatars/61/471/636453122222914252.jpeg) no-repeat center 208px,
-      url(https://media-waterdeep.cursecdn.com/attachments/0/84/background_texture.png) #f9f9f9;
-  }
-}
-@media (min-width: 1200px) {
-  html body.body-rpgcharacter-sheet {
-    background: url(https://www.dndbeyond.com/avatars/61/471/636453122222914252.jpeg) no-repeat center 230px,
-      url(https://media-waterdeep.cursecdn.com/attachments/0/84/background_texture.png) #f9f9f9;
-  }
-}
-@media (min-width: 1921px) {
-  html body.body-rpgcharacter-sheet {
-    background: url(https://www.dndbeyond.com/avatars/61/472/636453122223383028.jpeg) no-repeat center 230px,
-      url(https://media-waterdeep.cursecdn.com/attachments/0/84/background_texture.png) #f9f9f9;
-  }
-}
-@media (min-width: 2561px) {
-  html body.body-rpgcharacter-sheet {
-    background: url(https://www.dndbeyond.com/avatars/61/473/636453122224164304.jpeg) no-repeat center 230px,
-      url(https://media-waterdeep.cursecdn.com/attachments/0/84/background_texture.png) #f9f9f9;
-  }
-}
+
 #nav {
   padding: 30px;
   font-weight: bold;
@@ -307,8 +279,11 @@ All the links inside the <ul class=”navbar-nav mr-auto nav”> are styled by t
 }
 
 /* This controls the background color of the navbar, AS WELL as all link/text styling inside the navbar BRAND class ... so if you want the brand to not be a logo, but instead, text - this is where you'd set it to bold, neon green, comic sands etc*/
+/* It also, apparently, controls the color of the dots and icons */
 .navbar {
-  background: #021218;
+  /* background: #021218; */
+  background: #00090b;
+  color: #ffffff;
 }
 
 /* This controls the look of all router links */
@@ -343,5 +318,11 @@ All the links inside the <ul class=”navbar-nav mr-auto nav”> are styled by t
 .navbar-link {
   font-size: 20px;
   color: #fff;
+}
+.display-3 {
+  color: #ffffff;
+}
+.my-4 {
+  color: #ffffff;
 }
 </style>

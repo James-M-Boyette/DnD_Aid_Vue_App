@@ -5,12 +5,18 @@
     <div class="container">
       <!-- Jumbotron Header -->
       <header class="jumbotron my-4">
-        <h1 class="display-3">Welcome back USERNAME !</h1>
+        <h1 class="display-3">Welcome back {{}} !</h1>
         <h3>Here are your current characters:</h3>
-        <!-- This is a button to _ -->
-        <a href="/characters" class="btn btn-danger btn-lg">See all of your characters!</a>
-        <a href="/character_create" class="btn btn-danger btn-lg">Create a new character!</a>
-        <!-- target="_blank" -->
+        <div class="row">
+          <!-- Buttons for All and New Characters -->
+          <div class="col-lg-6 col-md-6 mb-4">
+            <a class="btn btn-danger btn-lg" href="/characters">See all of your characters!</a>
+          </div>
+          <div class="col-lg-6 col-md-6 mb-4">
+            <a class="btn btn-danger btn-lg" href="/character_create">Create a new character!</a>
+          </div>
+          <!-- target="_blank" -->
+        </div>
       </header>
     </div>
     <div class="container">
@@ -21,7 +27,7 @@
             <div class="card h-100">
               <!-- <img class="background" src="@/assets/Character_Avatars/Blue_Eyes_(Cristi-B).jpg" alt="" /> -->
               <!-- <img class="avatar" src="@/assets/Character_Avatars/Blue_Eyes_(Cristi-B).jpg" alt="" /> -->
-              <img class="background" src="@/assets/Character_Avatars/Blue_Eyes_(Cristi-B).jpg" alt="" />
+              <img class="background" src="@/assets/Imgs/Character_Avatars/Blue_Eyes_(Cristi-B).jpg" alt="" />
               <!-- <img class="background" v-bind:src="character.avatar_img" alt="..." /> -->
               <div class="card-body">
                 <h4 class="card-title">
@@ -34,7 +40,7 @@
               <div class="card-footer">
                 <!-- <a class="btn btn-danger" href="/your_character" v-bind:to="`/characters/${character.id}`" > -->
                 <!-- <a class="btn btn-danger" v-bind:href="`/your_character/`+character.id">Stay a'while, n listen!</a> -->
-                <a class="btn btn-danger" v-bind:href="`/your_character/${character.id}`">Stay a'while, n listen!</a>
+                <a class="btn btn-danger" v-bind:href="`/your_character/${character.id}`">See more!</a>
               </div>
             </div>
           </div>
@@ -128,6 +134,11 @@
   height: 150px;
   border-radius: 25%;
 }
+/* Button spacing not working ... */
+/* .btn {
+  padding-left: 0.5 !important;
+  padding-right: 0.5 !important;
+} */
 </style>
 
 <script>
