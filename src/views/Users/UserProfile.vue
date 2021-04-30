@@ -26,7 +26,7 @@
                 </li>
                 <li class="list-unstyled-item d-flex list-udetails-l">
                   Password:
-                  <span class="ml-auto list-udetails-r">{{ currentUser.password }}</span>
+                  <span class="ml-auto list-udetails-r">( Even we don't know! )</span>
                 </li>
               </ul>
             </div>
@@ -34,7 +34,7 @@
         </div>
       </div>
       <button class="update-button" v-on:click="userShow2">Update your profile!</button>
-      <!-- Update Button's Modal -->
+      <!-- The Update-Button's Modal -->
       <dialog id="user-details">
         <form method="dialog">
           <h2>Profile Update Options:</h2>
@@ -225,24 +225,31 @@ export default {
       console.log("Updating the user's info ...");
       console.log(theUser);
       var params = {
-        uFirstName: theUser.uFirstName,
-        uLastName: theUser.uLastName,
+        ufirstname: theUser.uFirstName,
+        ulastname: theUser.uLastName,
         email: theUser.email,
         password: theUser.password,
       };
-      axios.patch("/api/users/" + theUser.id, params).then((response) => {
+      // axios.patch("/api/users/" + theUser.id, params).then((response) => {
+      //   console.log(response.data);
+      // });
+      axios.patch("/api/users/current_user/", params).then((response) => {
         console.log(response.data);
       });
     },
-    userDestory: function (theUser) {
-      console.log("The user was deleted !");
-      console.log(theUser);
-      axios.delete("http://localhost:3000/api/users/" + theUser.id).then((response) => {
+    userDestory: function () {
+      console.log("Deleting user ...");
+      axios.delete("http://localhost:3000/api/users/current_user/").then((response) => {
         console.log(response.data);
-        var index = this.users.indexOf(theUser);
-        this.users.splice(index, 1);
+        // var index = this.users.indexOf(theUser);
+        // this.users.splice(index, 1);
+        console.log("The user was deleted !");
+        delete axios.defaults.headers.common["Authorization"];
+        localStorage.removeItem("jwt");
+        this.$router.push("/about");
       });
     },
+    // Can still see characters and the basic user profile page, even once your profile is deleted
   },
 };
 </script>
