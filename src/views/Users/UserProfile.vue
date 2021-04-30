@@ -54,6 +54,8 @@
             Password:
             <input class="pfl-mbox" type="text" v-model="currentUser.password" />
           </p>
+          <div>Input your password (old or new) before clicking 'Update'</div>
+          <p></p>
           <!-- <p>
             Password Confirmation:
             <input type="text" v-model="currentUser.password_confirmation" />
@@ -199,43 +201,47 @@ export default {
   },
   created: function () {
     console.log("Getting your profile info automatically ...");
-    console.log(this.$route.params.id);
-    // axios.get(`/api/users/current_user"${this.$route.params.id}`).then((response) => {
+    // Get request for current_user's info
     axios.get("/api/users/current_user").then((response) => {
       console.log(response.data);
+      // current_user's info is stored in var currentUser
       this.currentUser = response.data;
     });
   },
   methods: {
-    userShow: function (theUser) {
-      console.log("Showing the User (userShow) ...");
-      console.log(theUser);
-      this.currentUser = theUser;
-    },
+    // userShow: function (theUser) {
+    //   console.log("Showing the User (userShow) ...");
+    //   console.log(theUser);
+    //   this.currentUser = theUser;
+    // },
     userShow2: function () {
       console.log("User info is being forwarded to modal ...");
-      // console.log(this.$route.params.id);
-      // axios.get("/api/users/current_user").then((response) => {
-      //   console.log(response.data);
-      //   this.currentUser = response.data;
       document.querySelector("#user-details").showModal();
-      // }),
     },
     userUpdate: function (theUser) {
       console.log("Updating the user's info ...");
+      console.log("Here's what's in theUser:");
       console.log(theUser);
       var params = {
-        ufirstname: theUser.uFirstName,
-        ulastname: theUser.uLastName,
+        ufirstname: theUser.ufirstname,
+        ulastname: theUser.ulastname,
         email: theUser.email,
         password: theUser.password,
       };
+      console.log("Here's what's been stored in params ...");
+      console.log(params);
       // axios.patch("/api/users/" + theUser.id, params).then((response) => {
       //   console.log(response.data);
       // });
-      axios.patch("/api/users/current_user/", params).then((response) => {
-        console.log(response.data);
-      });
+      axios
+        .patch("/api/users/current_user/", params)
+        .then((response) => {
+          console.log(response.data);
+        })
+        .catch((error) => {
+          this.errors = error.response.data.errors;
+          console.log(this.errors);
+        });
     },
     userDestory: function () {
       console.log("Deleting user ...");
