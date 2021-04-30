@@ -1,5 +1,14 @@
 <template>
   <div id="app">
+    <!-- <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script> -->
+    <!-- Google fonts-->
+    <!-- <link
+      href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+      rel="stylesheet"
+    /> -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet" /> -->
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <!-- <link href="css/styles.css" rel="stylesheet" /> -->
     <!-- This is the original nav bar we made in class: basic links seperated by pipes -->
     <!-- <div id="nav">
       <router-link to="/">Home</router-link>
@@ -260,7 +269,7 @@ All the links inside the <ul class=”navbar-nav mr-auto nav”> are styled by t
   /* background-color: red; */
 }
 
-.navbar-custom {
+#navbarDropdown {
   color: #ffffff;
 }
 

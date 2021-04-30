@@ -64,16 +64,16 @@
             <div class="col-12 col-sm-8 col-md-6 col-lg-4">
               <div class="card">
                 <!-- <img class="card-img" src="@/assets/Imgs/Character_Avatars/Blue_Eyes_(Cristi-B).jpg" alt="Bologna" /> -->
-                <img class="card-img trans1" src="@/assets/Imgs/Transparent_Overlays/Stats.png" alt="Bologna" />
-                <div class="card-img-overlay text-white d-flex flex-column justify-content-center">
-                  <h4 class="card-title">Bologna</h4>
-                  <h6 class="card-subtitle mb-2">Emilia-Romagna Region, Italy</h6>
+                <img class="card-img" src="@/assets/Imgs/Transparent_Overlays/Stats.png" alt="DnD" />
+                <div class="card-img-overlay text-black d-flex flex-column justify-content-center">
+                  <h4 class="card-title justify-content-center">Bologna</h4>
+                  <h6 class="card-subtitle mb-2 justify-content-center">Emilia-Romagna Region, Italy</h6>
                   <p class="card-number1">
                     {{ theCharacter.strength }}
                   </p>
-                  <div class="link d-flex">
-                    <a href="#" class="card-link text-warning">Read More</a>
-                    <a href="#" class="card-link text-warning">Book a Trip</a>
+                  <div class="link d-flex justify-content-center">
+                    <a href="#" class="card-link text-second">Read More</a>
+                    <a href="#" class="card-link">Book a Trip</a>
                   </div>
                 </div>
               </div>
@@ -88,17 +88,24 @@
 </template>
 
 <style>
+.card {
+  background: rgba(255, 255, 255, 0.1) !important;
+  opacity: 1;
+}
+.cspec {
+  background: rgba(255, 255, 255, 0.1) !important;
+}
 .card-img-overlay {
-  background-color: rgba(#000);
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+.card-img {
+  background: rgba(255, 255, 255, 0.1) !important;
 }
 .card-number1 {
   font-size: 50px;
   color: rgb(8, 251, 40);
 }
-.trans1 {
-  background-color: #000;
-  opacity: 1;
-}
+
 .background {
   display: block;
   margin-left: auto;
