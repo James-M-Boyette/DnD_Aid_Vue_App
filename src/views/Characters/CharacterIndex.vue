@@ -5,7 +5,7 @@
     <div class="container">
       <!-- Jumbotron Header -->
       <header class="jumbotron my-4">
-        <h1 class="display-3">Welcome back {{}} !</h1>
+        <h1 class="display-3">Welcome back {{ the_User.ufirstname }} !</h1>
         <h3>Here are your current characters:</h3>
         <div class="row">
           <!-- Buttons for All and New Characters -->
@@ -149,7 +149,7 @@ export default {
       message: "Welcome to your previously-saved characters page!",
       characters: {},
       characterID: "",
-      userid: "",
+      user_id: "",
       cfirstname: "",
       cmiddlename: "",
       clastname: "",
@@ -170,12 +170,16 @@ export default {
       speed: "",
       origin_story: "",
       currentCharacter: [],
+      the_User: [],
     };
   },
   created: function () {
     console.log("Fetching all the characters automatically ...");
     this.charactersIndex();
     // I got this right, except I console.logged it rather than running it as a method
+    console.log("Getting your profile info automatically ...");
+    // Get request for current_user's info
+    this.theUser();
   },
   methods: {
     charactersIndex: function () {
@@ -194,6 +198,13 @@ export default {
       //   console.log(response.data);
       //   this.charactersTheirs = response.data;
       // });
+    },
+    theUser: function () {
+      axios.get("/api/users/current_user").then((response) => {
+        console.log(response.data);
+        // current_user's info is stored in var currentUser
+        this.the_User = response.data;
+      });
     },
     charactersShow: function (theCharacter) {
       console.log("CharactersShow action is executing ...");

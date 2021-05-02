@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" />
     <!-- <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script> -->
     <!-- Google fonts-->
     <!-- <link
@@ -105,139 +106,140 @@
         <!-- Home -->
 
         <!-- Dropdown : Home -->
-        <li class="nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle"
-            href="#"
-            id="navbarDropdown"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Home
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="/home">Home</a></li>
-            <li><a class="dropdown-item" href="/about">About</a></li>
-          </ul>
-        </li>
+        <!-- <li class="nav-item dropdown"> -->
+        <a class="btn btn-info btn-lg" href="/user_profile">
+          <span class="glyphicon glyphicon-user">User</span>
+        </a>
+        <a
+          class="nav-link dropdown-toggle btn btn-lg glyphicon glyphicon-home"
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Home
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" href="/home">Home</a></li>
+          <li><a class="dropdown-item" href="/about">About</a></li>
+        </ul>
+        <!-- </li> -->
         <!-- Dropdown : Users -->
-        <li class="nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle"
-            href="#"
-            id="navbarDropdown"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Users
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="/sign_up">Join!</a></li>
-            <li><hr class="dropdown-divider" /></li>
-            <li><a class="dropdown-item" href="/user_profile">View Profile</a></li>
-            <li><a class="dropdown-item" href="/user_profile">Edit Profile</a></li>
-            <li><a class="dropdown-item" href="/login">Log In</a></li>
-            <li><hr class="dropdown-divider" /></li>
-            <li><a class="dropdown-item" href="/logout">Log Out</a></li>
-          </ul>
-        </li>
+        <!-- <li class="nav-item dropdown"> -->
+        <a
+          class="nav-link dropdown-toggle"
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Users
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" href="/sign_up">Join!</a></li>
+          <li><hr class="dropdown-divider" /></li>
+          <li><a class="dropdown-item" href="/user_profile">View Profile</a></li>
+          <li><a class="dropdown-item" href="/user_profile">Edit Profile</a></li>
+          <li><a class="dropdown-item" href="/login">Log In</a></li>
+          <li><hr class="dropdown-divider" /></li>
+          <li><a class="dropdown-item" href="/logout">Log Out</a></li>
+        </ul>
+        <!-- </li> -->
 
         <!-- Dropdown : Characters -->
-        <li class="nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle"
-            href="#"
-            id="navbarDropdown"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Characters
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="/characters">View Your Characters</a></li>
-            <li><a class="dropdown-item" href="/character_create">Create New Character</a></li>
-          </ul>
-        </li>
+        <!-- <li class="nav-item dropdown"> -->
+        <a
+          class="nav-link dropdown-toggle"
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Characters
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" href="/characters">View Your Characters</a></li>
+          <li><a class="dropdown-item" href="/character_create">Create New Character</a></li>
+        </ul>
+        <!-- </li> -->
         <!-- Dropdown : Campaigns -->
-        <li class="nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle"
-            href="#"
-            id="navbarDropdown"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Campaigns
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="/test">Create a Campaign!</a></li>
-            <li><hr class="dropdown-divider" /></li>
-            <li><a class="dropdown-item" href="/test">Join, Resume, Leave</a></li>
-          </ul>
-        </li>
+        <!-- <li class="nav-item dropdown"> -->
+        <a
+          class="nav-link dropdown-toggle"
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Campaigns
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" href="/test">Create a Campaign!</a></li>
+          <li><hr class="dropdown-divider" /></li>
+          <li><a class="dropdown-item" href="/test">Join, Resume, Leave</a></li>
+        </ul>
+        <!-- </li> -->
         <!-- Dropdown : Parties -->
-        <li class="nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle"
-            href="#"
-            id="navbarDropdown"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Parties
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="/test">Create a Party!</a></li>
-            <li><hr class="dropdown-divider" /></li>
-            <li><a class="dropdown-item" href="/test">Join, Resume, Leave</a></li>
-          </ul>
-        </li>
+        <!-- <li class="nav-item dropdown"> -->
+        <a
+          class="nav-link dropdown-toggle"
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Parties
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" href="/test">Create a Party!</a></li>
+          <li><hr class="dropdown-divider" /></li>
+          <li><a class="dropdown-item" href="/test">Join, Resume, Leave</a></li>
+        </ul>
+        <!-- </li> -->
         <!-- Dropdown : Encyclopedia -->
-        <li class="nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle"
-            href="#"
-            id="navbarDropdown"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Encyclopedia
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="http://dnd5e.wikidot.com/" target="_blank">DnD5e Wiki</a></li>
-            <li><hr class="dropdown-divider" /></li>
-            <li><a class="dropdown-item" href="http://dnd5e.wikidot.com/#toc1" target="_blank">Spells</a></li>
-            <li><a class="dropdown-item" href="http://dnd5e.wikidot.com/#toc63" target="_blank">Items</a></li>
-            <li><a class="dropdown-item" href="http://dnd5e.wikidot.com/#toc20" target="_blank">Classes</a></li>
-            <li><a class="dropdown-item" href="http://dnd5e.wikidot.com/#toc3" target="_blank">Races</a></li>
-            <li><a class="dropdown-item" href="http://dnd5e.wikidot.com/#toc64" target="_blank">Feats</a></li>
-            <li><a class="dropdown-item" href="http://dnd5e.wikidot.com/#toc13" target="_blank">Backgrounds</a></li>
-          </ul>
-        </li>
+        <!-- <li class="nav-item dropdown"> -->
+        <a
+          class="nav-link dropdown-toggle"
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Encyclopedia
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" href="http://dnd5e.wikidot.com/" target="_blank">DnD5e Wiki</a></li>
+          <li><hr class="dropdown-divider" /></li>
+          <li><a class="dropdown-item" href="http://dnd5e.wikidot.com/#toc1" target="_blank">Spells</a></li>
+          <li><a class="dropdown-item" href="http://dnd5e.wikidot.com/#toc63" target="_blank">Items</a></li>
+          <li><a class="dropdown-item" href="http://dnd5e.wikidot.com/#toc20" target="_blank">Classes</a></li>
+          <li><a class="dropdown-item" href="http://dnd5e.wikidot.com/#toc3" target="_blank">Races</a></li>
+          <li><a class="dropdown-item" href="http://dnd5e.wikidot.com/#toc64" target="_blank">Feats</a></li>
+          <li><a class="dropdown-item" href="http://dnd5e.wikidot.com/#toc13" target="_blank">Backgrounds</a></li>
+        </ul>
+        <!-- </li> -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
         </div>
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="/test">!! Test !!</a>
-        </li>
+        <!-- <li class="nav-item"> -->
+        <a class="nav-link" aria-current="page" href="/test">!! Test !!</a>
+        <!-- </li> -->
         <!-- User Sign-Up/Login -->
         <ul class="nav navbar-nav navbar-right">
           <li>
-            <a class="glyphicon glyphicon-user" href="#">
-              <span></span>
-              Sign Up
+            <a class="btn btn-info btn-lg" href="/sign_up">
+              <span class="glyphicon glyphicon-user">Sign-up</span>
             </a>
           </li>
           <li>
-            <a class="glyphicon glyphicon-log-in" href="">
-              <span></span>
-              Login
+            <a class="btn btn-info btn-lg" href="/login">
+              <span class="glyphicon glyphicon-log-in">Login</span>
             </a>
           </li>
         </ul>
