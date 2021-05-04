@@ -1,6 +1,8 @@
 <template>
   <div class="UserProfile">
-    <div class="p-header">Welcome back, {{ currentUser.ufirstname }}!</div>
+    <div class="p-header">
+      Welcome back, {{ theCharacter.cfirstname }} {{ theCharacter.cmiddlename }} {{ theCharacter.clastname }}
+    </div>
     <!-- <h3>{{ "Brian's my hero" }}</h3> -->
     <section class="page-section cta">
       <div class="container">
@@ -8,63 +10,98 @@
           <div class="col-xl-9 mx-auto">
             <div class="cta-inner text-center rounded">
               <h2 class="section-heading mb-5">
-                <span class="section-heading-upper">Here's your current profile info:</span>
+                <span class="section-heading-upper">Here's your character's info:</span>
                 <!-- <span class="section-heading-lower">(Click "")</span> -->
               </h2>
               <ul class="list-unstyled mb-5 mx-auto rounded">
                 <li class="list-unstyled-item d-flex list-udetails-l">
                   First Name:
-                  <span class="ml-auto list-udetails-r">{{ currentUser.ufirstname }}</span>
+                  <span class="ml-auto list-udetails-r">{{ theCharacter.cfirstname }}</span>
                 </li>
                 <li class="list-unstyled-item d-flex list-udetails-l">
-                  <span>Last Name:</span>
-                  <span class="ml-auto list-udetails-r">{{ currentUser.ulastname }}</span>
+                  Middle Name:
+                  <span class="ml-auto list-udetails-r">{{ theCharacter.cmiddlename }}</span>
                 </li>
                 <li class="list-unstyled-item d-flex list-udetails-l">
-                  E-mail:
-                  <span class="ml-auto list-udetails-r">{{ currentUser.email }}</span>
+                  Last Name:
+                  <span class="ml-auto list-udetails-r">{{ theCharacter.clastname }}</span>
+                </li>
+                <div style="display: block"></div>
+                <li class="list-unstyled-item d-flex list-udetails-l">
+                  Origin Story:
+                  <span class="ml-auto list-udetails-r">{{ theCharacter.origin_story }}</span>
                 </li>
                 <li class="list-unstyled-item d-flex list-udetails-l">
-                  Password:
-                  <span class="ml-auto list-udetails-r">( Even we don't know! )</span>
+                  <!-- Race (ID):
+                  <span class="ml-auto list-udetails-r">{{ theCharacter.raceid }}</span> -->
+                  Race :
+                  <span class="ml-auto list-udetails-r">Human, Dessert</span>
+                </li>
+                <li class="list-unstyled-item d-flex list-udetails-l">
+                  <!-- Class (ID):
+                  <span class="ml-auto list-udetails-r">{{ theCharacter.classid }}</span> -->
+                  Class :
+                  <span class="ml-auto list-udetails-r">Cleric</span>
+                </li>
+                <li class="list-unstyled-item d-flex list-udetails-l">
+                  <!-- Alignment (ID):
+                  <span class="ml-auto list-udetails-r">{{ theCharacter.alignmentid }}</span> -->
+                  Alignment :
+                  <span class="ml-auto list-udetails-r">True Good</span>
+                </li>
+                <li class="list-unstyled-item d-flex list-udetails-l">
+                  <!-- Language (ID):
+                  <span class="ml-auto list-udetails-r">{{ theCharacter.languageid }}</span> -->
+                  Language:
+                  <span class="ml-auto list-udetails-r">Common</span>
+                </li>
+                <li class="list-unstyled-item d-flex list-udetails-l">
+                  <!-- Inventory (ID):
+                  <span class="ml-auto list-udetails-r">{{ theCharacter.inventoryid }}</span> -->
+                  Inventory:
+                  <span class="ml-auto list-udetails-r">Cloack, Staff, Belt of a poor man ...</span>
+                </li>
+                <li class="list-unstyled-item d-flex list-udetails-l">
+                  Strength:
+                  <span class="ml-auto list-udetails-r">{{ theCharacter.strength }}</span>
+                </li>
+                <li class="list-unstyled-item d-flex list-udetails-l">
+                  Dexterity:
+                  <span class="ml-auto list-udetails-r">{{ theCharacter.dexterity }}</span>
+                </li>
+                <li class="list-unstyled-item d-flex list-udetails-l">
+                  Constitution:
+                  <span class="ml-auto list-udetails-r">{{ theCharacter.constitution }}</span>
+                </li>
+                <li class="list-unstyled-item d-flex list-udetails-l">
+                  Intelligence:
+                  <span class="ml-auto list-udetails-r">{{ theCharacter.intelligence }}</span>
+                </li>
+                <li class="list-unstyled-item d-flex list-udetails-l">
+                  Wisdom:
+                  <span class="ml-auto list-udetails-r">{{ theCharacter.wisdom }}</span>
+                </li>
+                <li class="list-unstyled-item d-flex list-udetails-l">
+                  Max Health:
+                  <span class="ml-auto list-udetails-r">{{ theCharacter.healthmax }}</span>
+                </li>
+                <li class="list-unstyled-item d-flex list-udetails-l">
+                  Current Health:
+                  <span class="ml-auto list-udetails-r">{{ theCharacter.healthcurrent }}</span>
+                </li>
+                <li class="list-unstyled-item d-flex list-udetails-l">
+                  Temporary Health:
+                  <span class="ml-auto list-udetails-r">{{ theCharacter.healthtemp }}</span>
+                </li>
+                <li class="list-unstyled-item d-flex list-udetails-l">
+                  Speed:
+                  <span class="ml-auto list-udetails-r">{{ theCharacter.speed }}</span>
                 </li>
               </ul>
             </div>
           </div>
         </div>
       </div>
-      <button class="update-button" v-on:click="userShow2">Update your profile!</button>
-      <!-- The Update-Button's Modal -->
-      <dialog id="user-details">
-        <form method="dialog">
-          <h2>Profile Update Options:</h2>
-          <p class="l-text">
-            First Name:
-            <input class="pfl-mbox" type="text" v-model="currentUser.ufirstname" />
-          </p>
-          <p class="l-text">
-            Last Name:
-            <input class="pfl-mbox" type="text" v-model="currentUser.ulastname" />
-          </p>
-          <p class="l-text">
-            E-mail:
-            <input class="pfl-mbox" type="text" v-model="currentUser.email" />
-          </p>
-          <p class="l-text">
-            Password:
-            <input class="pfl-mbox" type="text" v-model="currentUser.password" />
-          </p>
-          <div>Input your password (old or new) before clicking 'Update'</div>
-          <p></p>
-          <!-- <p>
-            Password Confirmation:
-            <input type="text" v-model="currentUser.password_confirmation" />
-          </p> -->
-          <button v-on:click="userUpdate(currentUser)">Update</button>
-          <button>Close</button>
-        </form>
-      </dialog>
-      <button class="delete-button" v-on:click="userDestory">Delete your profile!</button>
     </section>
   </div>
 </template>
@@ -182,6 +219,12 @@ section {
   font-size: 42px;
   color: #ffffff;
 }
+hr.style-one {
+  border: 0;
+  height: 1px;
+  background: #333;
+  background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
 </style>
 
 <script>
@@ -189,73 +232,87 @@ import axios from "axios";
 export default {
   data: function () {
     return {
-      message: "#",
+      message: "Welcome to your previously-saved characters page!",
+      theCharacter: {},
+      userid: "",
+      cfirstname: "",
+      cmiddlename: "",
+      clastname: "",
+      raceid: "",
+      classid: "",
+      alignmentid: "",
+      languageid: "",
+      inventoryid: "",
+      strength: "",
+      dexterity: "",
+      constitution: "",
+      intelligence: "",
+      wisdom: "",
+      charisma: "",
+      healthmax: "",
+      healthcurrent: "",
+      healthtemp: "",
+      speed: "",
+      origin_story: "",
       currentUser: {},
-      uFirstName: "First name",
-      uLastName: "Last name",
-      email: "E-mail",
-      password: "Password",
-      password_confirmation: "Password2",
-      errors: [],
     };
   },
   created: function () {
+    console.log("Fetching this character's info automatically ...");
+    console.log(this.$route.params.id);
+    axios.get(`/api/characters/${this.$route.params.id}`).then((response) => {
+      console.log(response.data);
+      this.theCharacter = response.data;
+    });
     console.log("Getting your profile info automatically ...");
-    // Get request for current_user's info
+    console.log(this.$route.params.id);
+    // axios.get(`/api/users/current_user"${this.$route.params.id}`).then((response) => {
     axios.get("/api/users/current_user").then((response) => {
       console.log(response.data);
-      // current_user's info is stored in var currentUser
       this.currentUser = response.data;
     });
   },
   methods: {
-    // userShow: function (theUser) {
-    //   console.log("Showing the User (userShow) ...");
-    //   console.log(theUser);
-    //   this.currentUser = theUser;
-    // },
-    userShow2: function () {
-      console.log("User info is being forwarded to modal ...");
-      document.querySelector("#user-details").showModal();
-    },
-    userUpdate: function (theUser) {
-      console.log("Updating the user's info ...");
-      console.log("Here's what's in theUser:");
-      console.log(theUser);
-      var params = {
-        ufirstname: theUser.ufirstname,
-        ulastname: theUser.ulastname,
-        email: theUser.email,
-        password: theUser.password,
-      };
-      console.log("Here's what's been stored in params ...");
-      console.log(params);
-      // axios.patch("/api/users/" + theUser.id, params).then((response) => {
-      //   console.log(response.data);
-      // });
-      axios
-        .patch("/api/users/current_user/", params)
-        .then((response) => {
-          console.log(response.data);
-        })
-        .catch((error) => {
-          this.errors = error.response.data.errors;
-          console.log(this.errors);
-        });
-    },
-    userDestory: function () {
-      console.log("Deleting user ...");
-      axios.delete("http://localhost:3000/api/users/current_user/").then((response) => {
+    charactersShow: function (theCharacter) {
+      console.log("CharactersShow action is executing ...");
+      // Make a GET request to "/api/photos/" + this.$route.params.id
+      axios.get(`/api/characters"${this.$route.params.id}`).then((response) => {
         console.log(response.data);
-        // var index = this.users.indexOf(theUser);
-        // this.users.splice(index, 1);
-        console.log("The user was deleted !");
-        delete axios.defaults.headers.common["Authorization"];
-        localStorage.removeItem("jwt");
-        this.$router.push("/about");
+        this.theCharacter = response.data;
+      });
+      console.log(theCharacter);
+      // this.currentCharacter = theCharacter;
+      // document.querySelector("#character-details").showModal();
+      // console.log(this.currentCharacter);
+    },
+    characterUpdate: function (theCharacter) {
+      console.log("Let's change stuff about that character!");
+      console.log(theCharacter);
+      var params = {
+        userid: theCharacter.userid,
+        cfirstname: theCharacter.cfirstname,
+        cmiddlename: theCharacter.cmiddlename,
+        clastname: theCharacter.clastname,
+        raceid: theCharacter.raceid,
+        classid: theCharacter.classid,
+        alignmentid: theCharacter.alignmentid,
+        languageid: theCharacter.languageid,
+        inventoryid: theCharacter.inventoryid,
+        strength: theCharacter.strength,
+        dexterity: theCharacter.dexterity,
+        constitution: theCharacter.constitution,
+        intelligence: theCharacter.intelligence,
+        wisdom: theCharacter.wisdom,
+        charisma: theCharacter.charisma,
+        healthmax: theCharacter.healthmax,
+        healthcurrent: theCharacter.healthcurrent,
+        healthtemp: theCharacter.healthtemp,
+        speed: theCharacter.speed,
+      };
+      axios.patch("/api/characters/" + theCharacter.id, params).then((response) => {
+        console.log(response.data);
       });
     },
-    // Can still see characters and the basic user profile page, even once your profile is deleted
   },
 };
 </script>

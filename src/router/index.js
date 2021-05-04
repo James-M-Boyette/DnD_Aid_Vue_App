@@ -2,8 +2,9 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import CharacterIndex from "../views/Characters/CharacterIndex.vue";
-import CharacterShow from "../views/Characters/CharacterShow.vue";
-import CharacterShowUP from "../views/Characters/CharacterShow(UP).vue";
+// import CharacterShow from "../views/Characters/CharacterShow.vue";
+import CharacterShow from "../views/Characters/CharacterShow(UP).vue";
+// import CharacterShowUP from "../views/Characters/CharacterShow(UP).vue";
 import CharacterShowIdeal from "../views/Characters/CharacterShow(Ideal).vue";
 import CharacterCreate from "../views/Characters/CharacterCreate.vue";
 import UserSignUp from "../views/Users/UserSignUp.vue";
@@ -20,20 +21,24 @@ const routes = [
     name: "Characters",
     component: CharacterIndex,
   },
+  // {
+  //   path: "/your_character/:id",
+  //   name: "Character",
+  //   component: CharacterShow,
+  // },
   {
     path: "/your_character/:id",
     name: "Character",
     component: CharacterShow,
   },
-  {
-    path: "/your_character/",
-    // ?Add :id?
-    name: "CharacterUP",
-    component: CharacterShowUP,
-  },
+  // {
+  //   path: "/your_character/:id",
+  //   name: "CharacterUP",
+  //   component: CharacterShowUP,
+  // },
 
   {
-    path: "/your_character/Ideal",
+    path: "/ideal",
     name: "CharacterShow(Ideal)",
     component: CharacterShowIdeal,
   },

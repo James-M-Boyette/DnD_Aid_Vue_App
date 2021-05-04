@@ -213,7 +213,7 @@
           <div class="dropdown-menu dropdown-child" aria-labelledby="dropdownMenuButton">
             <a class="dropdown-item" href="/test">Beware the Minefield</a>
             <a class="dropdown-item" href="/your_character">Character Show (working)</a>
-            <a class="dropdown-item" href="/dream">Character Sheet Ideal</a>
+            <a class="dropdown-item" href="/ideal">Character Sheet Ideal</a>
           </div>
         </div>
         <!-- User Sign-Up/Login -->
