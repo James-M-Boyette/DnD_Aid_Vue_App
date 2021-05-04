@@ -1,22 +1,35 @@
 <template>
   <div class="login">
-    <form v-on:submit.prevent="submit()">
-      <h1>Login</h1>
-      <ul>
-        <li class="text-danger" v-for="error in errors" v-bind:key="error">
-          {{ error }}
-        </li>
-      </ul>
-      <div class="form-group">
-        <label>Email:</label>
-        <input type="email" class="form-control" v-model="email" />
+    <section class="page-section cta">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-9 mx-auto">
+            <div class="cta-inner rounded">
+              <h2 class="section-heading mb-5">
+                <form v-on:submit.prevent="submit()">
+                  <h1>Login</h1>
+                  <ul>
+                    <li class="text-danger" v-for="error in errors" v-bind:key="error">
+                      {{ error }}
+                    </li>
+                  </ul>
+                  <div class="form-group">
+                    <label>Email:</label>
+                    <input type="email" class="form-control" v-model="email" />
+                  </div>
+                  <div class="form-group">
+                    <label>Password:</label>
+                    <input type="password" class="form-control" v-model="password" />
+                  </div>
+                  <!-- <input type="submit" class="btn btn-primary" value="Submit" /> -->
+                  <button type="submit" class="btn btn-primary" value="Submit" />
+                </form>
+              </h2>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="form-group">
-        <label>Password:</label>
-        <input type="password" class="form-control" v-model="password" />
-      </div>
-      <input type="submit" class="btn btn-primary" value="Submit" />
-    </form>
+    </section>
   </div>
 </template>
 

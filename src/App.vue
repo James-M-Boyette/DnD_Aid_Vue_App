@@ -1,267 +1,242 @@
 <template>
   <div id="app">
+    <!-- <div :style="image" class="test"> -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" />
-    <div class="background-page">
-      <!-- <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script> -->
-      <!-- Google fonts-->
-      <!-- <link
-        href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet"
-      /> -->
-      <!-- <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet" /> -->
-      <!-- Core theme CSS (includes Bootstrap)-->
-      <!-- <link href="css/styles.css" rel="stylesheet" /> -->
-      <div class="banner">
-        <!-- <img class="hero-image" src="~@/assets/Imgs/DnDAidLogo.png" alt="" /> -->
-        <img class="hero-image" src="~@/assets/Imgs/DnDAidLogo.png" href="/home" />
-        <!-- <button class="hero-image"></button> -->
-      </div>
-      <!-- This is A potential "first" / "header" bar w logo, social media etc -->
-      <!-- <nav class="navbar fixed-top">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="/">
-            <img src="./assets/Logo1_(small).png" href="/" alt="" width="110" height="40" />
-          </a>
-        </div>
-      </nav> -->
-      <!-- This is a second, more basic header (not using bootstrap) -->
-      <!-- <div class="container">
-        <div class="page-header">
-          <a class="page-header" style="background-color: #021218">
-            <img src="./assets/Logo1_(small).png" href="/" alt="" width="110" height="40" />
-          </a>
-        </div>
-      </div> -->
-      <!-- This is the bootstrap navbar -->
-      <!-- NOTE: STICKY TOP BEING USED ... IF YOU WANT A SECOND HEADER ABOVE -->
-      <nav class="navbar sticky-top navbar-expand-lg">
-        <div class="container-fluid">
-          <!-- Brand (Logo Pic) + link -->
-          <!-- <a class="navbar-brand" href="/">
-            <img src="./assets/Logo1_(small).png" href="/home" alt="" width="110" height="40" />
-          </a> -->
-
-          <!-- Navbar Brand Logo -->
-          <a class="navbar-brand button" href="/home">
-            <img src="./assets/Logo1_(small).png" href="/home" alt="" width="110" height="40" />
-          </a>
-          <!-- test test -->
-          <!-- <div class="dropdown">
-            <a
-              class="btn btn-secondary dropdown-toggle"
-              href="#"
-              role="button"
-              id="dropdownMenuLink"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Dropdown link
+    <!-- <div class="background-page" style="z-index: -10"> -->
+    <!-- <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script> -->
+    <!-- Google fonts-->
+    <!-- <link
+          href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+          rel="stylesheet"
+        /> -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet" /> -->
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <!-- <link href="css/styles.css" rel="stylesheet" /> -->
+    <div class="banner">
+      <!-- <img class="hero-image" src="~@/assets/Imgs/DnDAidLogo.png" alt="" /> -->
+      <img class="hero-image" src="~@/assets/Imgs/DnDAidLogo.png" href="/home" />
+      <!-- <button class="hero-image"></button> -->
+    </div>
+    <!-- This is A potential "first" / "header" bar w logo, social media etc -->
+    <!-- <nav class="navbar fixed-top">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+              <img src="./assets/Logo1_(small).png" href="/" alt="" width="110" height="40" />
             </a>
-
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-          </div> -->
-          <!-- Dropdown : Home -->
-          <div class="dropdown dropdown-parent">
-            <button
-              class="btn btn-lg dropdown-toggle glyphicon glyphicon-off"
-              type="button"
-              id="dropdownMenuButton"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Home
-            </button>
-            <div class="dropdown-menu dropdown-child" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="/home">Home</a>
-              <a class="dropdown-item" href="/about">About</a>
-            </div>
           </div>
-          <!-- <a
-            class="dropdown-toggle btn btn-lg glyphicon glyphicon-home"
-            href="#"
-            id="dropdownMenuLink"
-            role="button"
-            data-bs-toggle="dropdown"
+        </nav> -->
+    <!-- This is a second, more basic header (not using bootstrap) -->
+    <!-- <div class="container">
+          <div class="page-header">
+            <a class="page-header" style="background-color: #021218">
+              <img src="./assets/Logo1_(small).png" href="/" alt="" width="110" height="40" />
+            </a>
+          </div>
+        </div> -->
+    <!-- This is the bootstrap navbar -->
+    <!-- NOTE: STICKY TOP BEING USED ... IF YOU WANT A SECOND HEADER ABOVE -->
+    <nav class="navbar sticky-top navbar-expand-lg">
+      <div class="container-fluid">
+        <!-- Brand (Logo Pic) + link -->
+        <!-- <a class="navbar-brand" href="/">
+              <img src="./assets/Logo1_(small).png" href="/home" alt="" width="110" height="40" />
+            </a> -->
+
+        <!-- Navbar Brand Logo -->
+        <a class="navbar-brand button" href="/home">
+          <img src="./assets/Logo1_(small).png" href="/home" alt="" width="110" height="40" />
+        </a>
+        <!-- test test -->
+        <!-- <div class="dropdown">
+              <a
+                class="btn btn-secondary dropdown-toggle"
+                href="#"
+                role="button"
+                id="dropdownMenuLink"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Dropdown link
+              </a>
+
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </div> -->
+        <!-- Dropdown : Home -->
+        <div class="dropdown dropdown-parent">
+          <button
+            class="btn btn-lg dropdown-toggle glyphicon glyphicon-off"
+            type="button"
+            id="dropdownMenuButton"
+            data-toggle="dropdown"
             aria-haspopup="true"
             aria-expanded="false"
           >
             Home
-          </a>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          </button>
+          <div class="dropdown-menu dropdown-child" aria-labelledby="dropdownMenuButton">
             <a class="dropdown-item" href="/home">Home</a>
             <a class="dropdown-item" href="/about">About</a>
-          </div> -->
-          <!-- <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="/home">Home</a></li>
-            <li><a class="dropdown-item" href="/about">About</a></li>
-          </ul> -->
-          <!-- Dropdown : Users -->
-          <div class="dropdown dropdown-parent">
-            <button
-              class="btn btn-lg dropdown-toggle glyphicon glyphicon-off"
-              type="button"
-              id="dropdownMenuButton"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Users
-            </button>
-            <div class="dropdown-menu dropdown-child" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="/home">Home</a>
-              <a class="dropdown-item" href="/about">About</a>
-            </div>
           </div>
-          <div>
-            <button
-              class="nav-link dropdown-toggle btn btn-lg glyphicon glyphicon-user"
+        </div>
+        <!-- Dropdown : Users -->
+        <div class="dropdown dropdown-parent">
+          <button
+            class="btn btn-lg dropdown-toggle glyphicon glyphicon-off"
+            type="button"
+            id="dropdownMenuButton"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Users
+          </button>
+          <div class="dropdown-menu dropdown-child" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="/sign_up">Join!</a>
+            <hr class="dropdown-divider" />
+            <a class="dropdown-item" href="/login">Log In</a>
+            <a class="dropdown-item" href="/user_profile">View Profile</a>
+            <a class="dropdown-item" href="/user_profile">Edit Profile</a>
+            <hr class="dropdown-divider" />
+            <a class="dropdown-item" href="/logout">Log Out</a>
+          </div>
+        </div>
+        <!-- Dropdown : Characters -->
+        <div class="dropdown dropdown-parent">
+          <button
+            class="btn btn-lg dropdown-toggle glyphicon glyphicon-off"
+            type="button"
+            id="dropdownMenuButton"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Characters
+          </button>
+          <div class="dropdown-menu dropdown-child" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="/characters">View Your Characters</a>
+            <a class="dropdown-item" href="/character_create">Createa New Character</a>
+          </div>
+        </div>
+        <!-- glyphicon glyphicon-user -->
+        <!-- Dropdown : Campaigns -->
+        <div class="dropdown dropdown-parent">
+          <button
+            class="btn btn-lg dropdown-toggle glyphicon glyphicon-off"
+            type="button"
+            id="dropdownMenuButton"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Campaigns
+          </button>
+          <div class="dropdown-menu dropdown-child" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="/test">Create a Campaign!</a>
+            <a class="dropdown-item" href="/test">Join, Resume, Leave</a>
+          </div>
+        </div>
+        <!-- glyphicon glyphicon-tower -->
+        <div class="dropdown dropdown-parent">
+          <button
+            class="btn btn-lg dropdown-toggle glyphicon glyphicon-off"
+            type="button"
+            id="dropdownMenuButton"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Parties
+          </button>
+          <div class="dropdown-menu dropdown-child" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="/test">Create a Party!</a>
+            <a class="dropdown-item" href="/test">Join, Resume, Leave</a>
+          </div>
+        </div>
+        <!-- <a
+              class="nav-link dropdown-toggle btn btn-lg glyphicon glyphicon-fullscreen"
               href="#"
               id="navbarDropdown"
               role="button"
               data-bs-toggle="dropdown"
-              aria-haspopup="true"
               aria-expanded="false"
             >
-              Users
-            </button>
-            <div class="dropdown-menu dropdown-child" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="/sign_up">Join!</a>
-              <hr class="dropdown-divider" />
-              <a class="dropdown-item" href="/login">Log In</a>
-              <a class="dropdown-item" href="/user_profile">View Profile</a>
-              <a class="dropdown-item" href="/user_profile">Edit Profile</a>
-              <hr class="dropdown-divider" />
-              <a class="dropdown-item" href="/logout">Log Out</a>
-            </div>
-          </div>
-          <!-- Dropdown : Characters -->
-          <a
-            class="nav-link dropdown-toggle btn btn-lg glyphicon glyphicon-eye-open"
-            href="#"
-            id="navbarDropdown"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Characters
-            <!-- glyphicon glyphicon-user -->
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="/characters">View Your Characters</a></li>
-            <li><a class="dropdown-item" href="/character_create">Create New Character</a></li>
-          </ul>
-          <!-- Dropdown : Campaigns -->
-          <a
-            class="nav-link dropdown-toggle btn btn-lg glyphicon glyphicon-globe"
-            href="#"
-            id="navbarDropdown"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Campaigns
-            <!-- glyphicon glyphicon-tower -->
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="/test">Create a Campaign!</a></li>
-            <li><hr class="dropdown-divider" /></li>
-            <li><a class="dropdown-item" href="/test">Join, Resume, Leave</a></li>
-          </ul>
-          <!-- Dropdown : Parties -->
-          <a
-            class="nav-link dropdown-toggle btn btn-lg glyphicon glyphicon-fullscreen"
-            href="#"
-            id="navbarDropdown"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Parties
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="/test">Create a Party!</a></li>
-            <li><hr class="dropdown-divider" /></li>
-            <li><a class="dropdown-item" href="/test">Join, Resume, Leave</a></li>
-          </ul>
-          <!-- Dropdown : Encyclopedia -->
-          <a
-            class="nav-link dropdown-toggle btn btn-lg glyphicon glyphicon-book dropdown-parent"
-            href="#"
-            id="navbarDropdown"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
+              Parties
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="/test">Create a Party!</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item" href="/test">Join, Resume, Leave</a></li>
+            </ul> -->
+        <!-- Dropdown : Encyclopedia -->
+        <div class="dropdown dropdown-parent">
+          <button
+            class="btn btn-lg dropdown-toggle glyphicon glyphicon-off"
+            type="button"
+            id="dropdownMenuButton"
+            data-toggle="dropdown"
             aria-haspopup="true"
+            aria-expanded="false"
           >
             Encyclopedia
-          </a>
-          <ul class="dropdown-menu dropdown-child" aria-labelledby="navbarDropdown">
-            <!-- <li><a class="dropdown-item" href="http://dnd5e.wikidot.com/" target="_blank">DnD5e Wiki</a></li> -->
-            <!-- <li><hr class="dropdown-divider" /></li> -->
-            <li><a class="dropdown-item" href="https://www.dndbeyond.com/spells" target="_blank">Spells</a></li>
-            <!-- href="http://dnd5e.wikidot.com/#toc1" -->
-            <li><a class="dropdown-item" href="https://www.dndbeyond.com/items" target="_blank">Items</a></li>
-            <!-- href="http://dnd5e.wikidot.com/#toc63" -->
-            <li><a class="dropdown-item" href="https://www.dndbeyond.com/classes" target="_blank">Classes</a></li>
-            <!-- href="http://dnd5e.wikidot.com/#toc20" -->
-            <li><a class="dropdown-item" href="https://www.dndbeyond.com/races" target="_blank">Races</a></li>
-            <!-- href="http://dnd5e.wikidot.com/#toc3" -->
-            <li><a class="dropdown-item" href="https://www.dndbeyond.com/feats" target="_blank">Feats</a></li>
-            <!-- href="http://dnd5e.wikidot.com/#toc64" -->
-            <li>
-              <a class="dropdown-item" href="https://www.dndbeyond.com/backgrounds" target="_blank">Backgrounds</a>
-            </li>
-            <!-- href="http://dnd5e.wikidot.com/#toc13" -->
-          </ul>
-          <!-- This is keeping the alignment of the navbar menu items where I want them ... need to figure out how later -->
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul> -->
+          </button>
+          <div class="dropdown-menu dropdown-child" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="https://www.dndbeyond.com/spells" target="_blank">Spells</a>
+            <a class="dropdown-item" href="https://www.dndbeyond.com/items" target="_blank">Items</a>
+            <a class="dropdown-item" href="https://www.dndbeyond.com/classes" target="_blank">Classes</a>
+            <a class="dropdown-item" href="https://www.dndbeyond.com/races" target="_blank">Races</a>
+            <a class="dropdown-item" href="https://www.dndbeyond.com/feats" target="_blank">Feats</a>
+            <a class="dropdown-item" href="https://www.dndbeyond.com/backgrounds" target="_blank">Backgrounds</a>
           </div>
-          <!-- <li class="nav-item"> -->
-          <div class="dropdown dropdown-parent">
-            <button
-              class="btn btn-lg dropdown-toggle glyphicon glyphicon-off"
-              type="button"
-              id="dropdownMenuButton"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Dev Ops
-            </button>
-            <div class="dropdown-menu dropdown-child" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="/test">Beware the Minefield</a>
-              <a class="dropdown-item" href="/your_character">Character Show (working)</a>
-              <a class="dropdown-item" href="/dream">Character Sheet Ideal</a>
-            </div>
-          </div>
-          <!-- User Sign-Up/Login -->
-          <ul class="nav navbar-nav navbar-right">
-            <li>
-              <a class="btn btn-info btn-lg" href="/sign_up">
-                <span class="glyphicon glyphicon-upload"></span>
-                <span class="single-space">_</span>
-                <span>Sign-up</span>
-              </a>
-            </li>
-            <li>
-              <a class="btn btn-info btn-lg" href="/login">
-                <span class="glyphicon glyphicon-log-in"></span>
-                <span class="single-space">_</span>
-                <span>Login</span>
-              </a>
-            </li>
-          </ul>
         </div>
-      </nav>
-      <router-view />
-    </div>
+
+        <!-- This is keeping the alignment of the navbar menu items where I want them ... need to figure out how later -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul> -->
+        </div>
+        <!-- <li class="nav-item"> -->
+        <div class="dropdown dropdown-parent">
+          <button
+            class="btn btn-lg dropdown-toggle glyphicon glyphicon-off"
+            type="button"
+            id="dropdownMenuButton"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Dev Ops
+          </button>
+          <div class="dropdown-menu dropdown-child" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="/test">Beware the Minefield</a>
+            <a class="dropdown-item" href="/your_character">Character Show (working)</a>
+            <a class="dropdown-item" href="/dream">Character Sheet Ideal</a>
+          </div>
+        </div>
+        <!-- User Sign-Up/Login -->
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a class="btn btn-info btn-lg" href="/sign_up">
+              <span class="glyphicon glyphicon-upload"></span>
+              <span class="single-space">_</span>
+              <span>Sign-up</span>
+            </a>
+          </li>
+          <li>
+            <a class="btn btn-info btn-lg" href="/login">
+              <span class="glyphicon glyphicon-log-in"></span>
+              <span class="single-space">_</span>
+              <span>Login</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- <div :style="image" class="test"></div> -->
+    <!-- </div> -->
   </div>
 </template>
 
@@ -281,17 +256,24 @@ All the links inside the <ul class=”navbar-nav mr-auto nav”> are styled by t
   /* The file needed to be in Cammel case to work ... also I didn't have the .jpg initially o.O */
   /* Also ... do we really want to random this? The Text we're showing on various pages, the brand styling ... at most, we should have all images with the same general Hue, value */
 }
-#background-market {
+/* #background-market {
   background-image: url("~@/assets/Imgs/Backgrounds/BlackMarketEntranceHamsterfly.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  /* background-size: 100% 100%; */
+  background-size: 100% 100%;
   background-attachment: local;
   position: relative;
   color: #ffffff;
-  /* background-repeat: no-repeat; */
-  /* background-color: red; */
+  background-repeat: no-repeat;
+  background-color: red;
+} */
+.test {
+  background-image: url("~@/assets/Imgs/Backgrounds/hexellence/hexellence_2X.png");
+  background-size: 25%;
+  background-repeat: repeat;
+  background-position: center;
+  background-attachment: local;
 }
 .background-page {
   background-position: center;
@@ -299,6 +281,7 @@ All the links inside the <ul class=”navbar-nav mr-auto nav”> are styled by t
   background-repeat: repeat;
   position: relative;
   color: #ffffff;
+  z-index: -10;
 }
 .background-page::before {
   content: "";

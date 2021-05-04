@@ -1,13 +1,13 @@
 <template>
-  <div class="UserProfile">
+  <div class="UserProfile" display="block">
     <div class="p-header">Welcome back, {{ currentUser.ufirstname }}!</div>
     <!-- <h3>{{ "Brian's my hero" }}</h3> -->
-    <section class="page-section cta">
-      <div class="container">
-        <div class="row">
-          <div class="col-xl-9 mx-auto">
-            <div class="cta-inner text-center rounded">
-              <h2 class="section-heading mb-5">
+    <section class="page-section cta" style="z-index: 5">
+      <div class="container" style="z-index: 6" position="fixed">
+        <div class="row" style="z-index: 7" position="fixed">
+          <div class="col-xl-9 mx-auto" style="z-index: 8" position="fixed">
+            <div class="cta-inner text-center rounded" style="z-index: 9" position="fixed">
+              <h2 class="section-heading mb-5" style="z-index: 10" position="fixed">
                 <span class="section-heading-upper">Here's your current profile info:</span>
                 <!-- <span class="section-heading-lower">(Click "")</span> -->
               </h2>
