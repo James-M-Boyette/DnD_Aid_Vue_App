@@ -3,6 +3,8 @@ import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import CharacterIndex from "../views/Characters/CharacterIndex.vue";
 import CharacterShow from "../views/Characters/CharacterShow.vue";
+import CharacterShowUP from "../views/Characters/CharacterShow(UP).vue";
+import CharacterShowIdeal from "../views/Characters/CharacterShow(Ideal).vue";
 import CharacterCreate from "../views/Characters/CharacterCreate.vue";
 import UserSignUp from "../views/Users/UserSignUp.vue";
 import Login from "../views/Users/Login.vue";
@@ -22,6 +24,18 @@ const routes = [
     path: "/your_character/:id",
     name: "Character",
     component: CharacterShow,
+  },
+  {
+    path: "/your_character/",
+    // ?Add :id?
+    name: "CharacterUP",
+    component: CharacterShowUP,
+  },
+
+  {
+    path: "/your_character/Ideal",
+    name: "CharacterShow(Ideal)",
+    component: CharacterShowIdeal,
   },
   {
     path: "/character_create",

@@ -3125,6 +3125,7 @@ textarea.input-lg {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  color: rgb(212, 41, 190);
 }
 .btn.active.focus,
 .btn.active:focus,

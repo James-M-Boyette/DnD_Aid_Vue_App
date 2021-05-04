@@ -1,258 +1,273 @@
 <template>
   <div id="app">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" />
-    <!-- <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script> -->
-    <!-- Google fonts-->
-    <!-- <link
-      href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
-      rel="stylesheet"
-    /> -->
-    <!-- <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet" /> -->
-    <!-- Core theme CSS (includes Bootstrap)-->
-    <!-- <link href="css/styles.css" rel="stylesheet" /> -->
-    <!-- This is the original nav bar we made in class: basic links seperated by pipes -->
-    <!-- <div id="nav">
-      <router-link to="/">Home</router-link>
-      |
-      <router-link to="/about">About</router-link>
-      |
-      <router-link to="/login">Login</router-link>
-      |
-      <router-link to="/logout">Logout</router-link>
-      |
-      <router-link to="/character/:id">Your Characters</router-link>
-      |
-      <router-link to="/character_create">Character Creation</router-link>
-      |
-      <router-link to="/SignUp">User Sign-Up</router-link>
-      |
-      <router-link to="/test">test of theme</router-link>
-    </div> -->
-    <nav class="navbar sticky-top navbar-expand-lg">
-      <div class="container-fluid">
-        <!-- Brand (Logo Pic) + link -->
-        <a class="navbar-brand" href="/">
-          <img src="./assets/Logo1_(small).png" href="/home" alt="" width="110" height="40" />
-        </a>
-        <!-- <a class="btn btn-social-icon btn-lg btn-twitter" v-onclick="">
-          <span class="fa fa-twitter"></span>
-        </a> -->
-        <!-- <i class="fab fa-twitter"></i> -->
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          fill="currentColor"
-          class="fab fa-twitter"
-          viewBox="0 0 16 16"
-          href="/home"
-        >
-          <path
-            d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
-          />
-        </svg>
-        <form class="d-flex">
-          <!-- Search + Button -->
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
+    <div class="background-page">
+      <!-- <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script> -->
+      <!-- Google fonts-->
+      <!-- <link
+        href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet"
+      /> -->
+      <!-- <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet" /> -->
+      <!-- Core theme CSS (includes Bootstrap)-->
+      <!-- <link href="css/styles.css" rel="stylesheet" /> -->
+      <div class="banner">
+        <!-- <img class="hero-image" src="~@/assets/Imgs/DnDAidLogo.png" alt="" /> -->
+        <img class="hero-image" src="~@/assets/Imgs/DnDAidLogo.png" href="/home" />
+        <!-- <button class="hero-image"></button> -->
       </div>
-    </nav>
-    <!-- This is A potential "first" / "header" bar w logo, social media etc -->
-    <!-- <nav class="navbar fixed-top">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="/">
-          <img src="./assets/Logo1_(small).png" href="/" alt="" width="110" height="40" />
-        </a>
-      </div>
-    </nav> -->
-    <!-- This is a second, more basic header (not using bootstrap) -->
-    <!-- <div class="container">
-      <div class="page-header">
-        <a class="page-header" style="background-color: #021218">
-          <img src="./assets/Logo1_(small).png" href="/" alt="" width="110" height="40" />
-        </a>
-      </div>
-    </div> -->
-    <!-- This is the bootstrap navbar -->
-    <!-- NOTE: STICKY TOP BEING USED ... IF YOU WANT A SECOND HEADER ABOVE -->
-    <nav class="navbar sticky-top navbar-expand-lg">
-      <div class="container-fluid">
-        <!-- Brand (Logo Pic) + link -->
-        <!-- <a class="navbar-brand" href="/">
-          <img src="./assets/Logo1_(small).png" href="/home" alt="" width="110" height="40" />
-        </a> -->
-
-        <!-- Hamberger, I think ... -->
-        <button
-          class="navbar-toggler"
-          type="button"
-          color="#ffffff"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- Home (Link) -->
-        <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" href="/home">Home</a>
-          </li>
-        </ul> -->
-        <!-- Home -->
-
-        <!-- Dropdown : Home -->
-        <!-- <li class="nav-item dropdown"> -->
-        <a class="btn btn-info btn-lg" href="/user_profile">
-          <span class="glyphicon glyphicon-user">User</span>
-        </a>
-        <a
-          class="nav-link dropdown-toggle btn btn-lg glyphicon glyphicon-home"
-          href="#"
-          id="navbarDropdown"
-          role="button"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
-        >
-          Home
-        </a>
-        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <li><a class="dropdown-item" href="/home">Home</a></li>
-          <li><a class="dropdown-item" href="/about">About</a></li>
-        </ul>
-        <!-- </li> -->
-        <!-- Dropdown : Users -->
-        <!-- <li class="nav-item dropdown"> -->
-        <a
-          class="nav-link dropdown-toggle"
-          href="#"
-          id="navbarDropdown"
-          role="button"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
-        >
-          Users
-        </a>
-        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <li><a class="dropdown-item" href="/sign_up">Join!</a></li>
-          <li><hr class="dropdown-divider" /></li>
-          <li><a class="dropdown-item" href="/user_profile">View Profile</a></li>
-          <li><a class="dropdown-item" href="/user_profile">Edit Profile</a></li>
-          <li><a class="dropdown-item" href="/login">Log In</a></li>
-          <li><hr class="dropdown-divider" /></li>
-          <li><a class="dropdown-item" href="/logout">Log Out</a></li>
-        </ul>
-        <!-- </li> -->
-
-        <!-- Dropdown : Characters -->
-        <!-- <li class="nav-item dropdown"> -->
-        <a
-          class="nav-link dropdown-toggle"
-          href="#"
-          id="navbarDropdown"
-          role="button"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
-        >
-          Characters
-        </a>
-        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <li><a class="dropdown-item" href="/characters">View Your Characters</a></li>
-          <li><a class="dropdown-item" href="/character_create">Create New Character</a></li>
-        </ul>
-        <!-- </li> -->
-        <!-- Dropdown : Campaigns -->
-        <!-- <li class="nav-item dropdown"> -->
-        <a
-          class="nav-link dropdown-toggle"
-          href="#"
-          id="navbarDropdown"
-          role="button"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
-        >
-          Campaigns
-        </a>
-        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <li><a class="dropdown-item" href="/test">Create a Campaign!</a></li>
-          <li><hr class="dropdown-divider" /></li>
-          <li><a class="dropdown-item" href="/test">Join, Resume, Leave</a></li>
-        </ul>
-        <!-- </li> -->
-        <!-- Dropdown : Parties -->
-        <!-- <li class="nav-item dropdown"> -->
-        <a
-          class="nav-link dropdown-toggle"
-          href="#"
-          id="navbarDropdown"
-          role="button"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
-        >
-          Parties
-        </a>
-        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <li><a class="dropdown-item" href="/test">Create a Party!</a></li>
-          <li><hr class="dropdown-divider" /></li>
-          <li><a class="dropdown-item" href="/test">Join, Resume, Leave</a></li>
-        </ul>
-        <!-- </li> -->
-        <!-- Dropdown : Encyclopedia -->
-        <!-- <li class="nav-item dropdown"> -->
-        <a
-          class="nav-link dropdown-toggle"
-          href="#"
-          id="navbarDropdown"
-          role="button"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
-        >
-          Encyclopedia
-        </a>
-        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <li><a class="dropdown-item" href="http://dnd5e.wikidot.com/" target="_blank">DnD5e Wiki</a></li>
-          <li><hr class="dropdown-divider" /></li>
-          <li><a class="dropdown-item" href="http://dnd5e.wikidot.com/#toc1" target="_blank">Spells</a></li>
-          <li><a class="dropdown-item" href="http://dnd5e.wikidot.com/#toc63" target="_blank">Items</a></li>
-          <li><a class="dropdown-item" href="http://dnd5e.wikidot.com/#toc20" target="_blank">Classes</a></li>
-          <li><a class="dropdown-item" href="http://dnd5e.wikidot.com/#toc3" target="_blank">Races</a></li>
-          <li><a class="dropdown-item" href="http://dnd5e.wikidot.com/#toc64" target="_blank">Feats</a></li>
-          <li><a class="dropdown-item" href="http://dnd5e.wikidot.com/#toc13" target="_blank">Backgrounds</a></li>
-        </ul>
-        <!-- </li> -->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+      <!-- This is A potential "first" / "header" bar w logo, social media etc -->
+      <!-- <nav class="navbar fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">
+            <img src="./assets/Logo1_(small).png" href="/" alt="" width="110" height="40" />
+          </a>
         </div>
-        <!-- <li class="nav-item"> -->
-        <a class="nav-link" aria-current="page" href="/test">!! Test !!</a>
-        <!-- </li> -->
-        <!-- User Sign-Up/Login -->
-        <ul class="nav navbar-nav navbar-right">
-          <li>
-            <a class="btn btn-info btn-lg" href="/sign_up">
-              <span class="glyphicon glyphicon-user">Sign-up</span>
+      </nav> -->
+      <!-- This is a second, more basic header (not using bootstrap) -->
+      <!-- <div class="container">
+        <div class="page-header">
+          <a class="page-header" style="background-color: #021218">
+            <img src="./assets/Logo1_(small).png" href="/" alt="" width="110" height="40" />
+          </a>
+        </div>
+      </div> -->
+      <!-- This is the bootstrap navbar -->
+      <!-- NOTE: STICKY TOP BEING USED ... IF YOU WANT A SECOND HEADER ABOVE -->
+      <nav class="navbar sticky-top navbar-expand-lg">
+        <div class="container-fluid">
+          <!-- Brand (Logo Pic) + link -->
+          <!-- <a class="navbar-brand" href="/">
+            <img src="./assets/Logo1_(small).png" href="/home" alt="" width="110" height="40" />
+          </a> -->
+
+          <!-- Navbar Brand Logo -->
+          <a class="navbar-brand button" href="/home">
+            <img src="./assets/Logo1_(small).png" href="/home" alt="" width="110" height="40" />
+          </a>
+          <!-- test test -->
+          <!-- <div class="dropdown">
+            <a
+              class="btn btn-secondary dropdown-toggle"
+              href="#"
+              role="button"
+              id="dropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Dropdown link
             </a>
-          </li>
-          <li>
-            <a class="btn btn-info btn-lg" href="/login">
-              <span class="glyphicon glyphicon-log-in">Login</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <router-view />
-    <div></div>
+
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </div> -->
+          <!-- Dropdown : Home -->
+          <div class="dropdown dropdown-parent">
+            <button
+              class="btn btn-lg dropdown-toggle glyphicon glyphicon-off"
+              type="button"
+              id="dropdownMenuButton"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Home
+            </button>
+            <div class="dropdown-menu dropdown-child" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="/home">Home</a>
+              <a class="dropdown-item" href="/about">About</a>
+            </div>
+          </div>
+          <!-- <a
+            class="dropdown-toggle btn btn-lg glyphicon glyphicon-home"
+            href="#"
+            id="dropdownMenuLink"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Home
+          </a>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <a class="dropdown-item" href="/home">Home</a>
+            <a class="dropdown-item" href="/about">About</a>
+          </div> -->
+          <!-- <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="/home">Home</a></li>
+            <li><a class="dropdown-item" href="/about">About</a></li>
+          </ul> -->
+          <!-- Dropdown : Users -->
+          <div class="dropdown dropdown-parent">
+            <button
+              class="btn btn-lg dropdown-toggle glyphicon glyphicon-off"
+              type="button"
+              id="dropdownMenuButton"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Users
+            </button>
+            <div class="dropdown-menu dropdown-child" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="/home">Home</a>
+              <a class="dropdown-item" href="/about">About</a>
+            </div>
+          </div>
+          <div>
+            <button
+              class="nav-link dropdown-toggle btn btn-lg glyphicon glyphicon-user"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Users
+            </button>
+            <div class="dropdown-menu dropdown-child" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="/sign_up">Join!</a>
+              <hr class="dropdown-divider" />
+              <a class="dropdown-item" href="/login">Log In</a>
+              <a class="dropdown-item" href="/user_profile">View Profile</a>
+              <a class="dropdown-item" href="/user_profile">Edit Profile</a>
+              <hr class="dropdown-divider" />
+              <a class="dropdown-item" href="/logout">Log Out</a>
+            </div>
+          </div>
+          <!-- Dropdown : Characters -->
+          <a
+            class="nav-link dropdown-toggle btn btn-lg glyphicon glyphicon-eye-open"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Characters
+            <!-- glyphicon glyphicon-user -->
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="/characters">View Your Characters</a></li>
+            <li><a class="dropdown-item" href="/character_create">Create New Character</a></li>
+          </ul>
+          <!-- Dropdown : Campaigns -->
+          <a
+            class="nav-link dropdown-toggle btn btn-lg glyphicon glyphicon-globe"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Campaigns
+            <!-- glyphicon glyphicon-tower -->
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="/test">Create a Campaign!</a></li>
+            <li><hr class="dropdown-divider" /></li>
+            <li><a class="dropdown-item" href="/test">Join, Resume, Leave</a></li>
+          </ul>
+          <!-- Dropdown : Parties -->
+          <a
+            class="nav-link dropdown-toggle btn btn-lg glyphicon glyphicon-fullscreen"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Parties
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="/test">Create a Party!</a></li>
+            <li><hr class="dropdown-divider" /></li>
+            <li><a class="dropdown-item" href="/test">Join, Resume, Leave</a></li>
+          </ul>
+          <!-- Dropdown : Encyclopedia -->
+          <a
+            class="nav-link dropdown-toggle btn btn-lg glyphicon glyphicon-book dropdown-parent"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            aria-haspopup="true"
+          >
+            Encyclopedia
+          </a>
+          <ul class="dropdown-menu dropdown-child" aria-labelledby="navbarDropdown">
+            <!-- <li><a class="dropdown-item" href="http://dnd5e.wikidot.com/" target="_blank">DnD5e Wiki</a></li> -->
+            <!-- <li><hr class="dropdown-divider" /></li> -->
+            <li><a class="dropdown-item" href="https://www.dndbeyond.com/spells" target="_blank">Spells</a></li>
+            <!-- href="http://dnd5e.wikidot.com/#toc1" -->
+            <li><a class="dropdown-item" href="https://www.dndbeyond.com/items" target="_blank">Items</a></li>
+            <!-- href="http://dnd5e.wikidot.com/#toc63" -->
+            <li><a class="dropdown-item" href="https://www.dndbeyond.com/classes" target="_blank">Classes</a></li>
+            <!-- href="http://dnd5e.wikidot.com/#toc20" -->
+            <li><a class="dropdown-item" href="https://www.dndbeyond.com/races" target="_blank">Races</a></li>
+            <!-- href="http://dnd5e.wikidot.com/#toc3" -->
+            <li><a class="dropdown-item" href="https://www.dndbeyond.com/feats" target="_blank">Feats</a></li>
+            <!-- href="http://dnd5e.wikidot.com/#toc64" -->
+            <li>
+              <a class="dropdown-item" href="https://www.dndbeyond.com/backgrounds" target="_blank">Backgrounds</a>
+            </li>
+            <!-- href="http://dnd5e.wikidot.com/#toc13" -->
+          </ul>
+          <!-- This is keeping the alignment of the navbar menu items where I want them ... need to figure out how later -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul> -->
+          </div>
+          <!-- <li class="nav-item"> -->
+          <div class="dropdown dropdown-parent">
+            <button
+              class="btn btn-lg dropdown-toggle glyphicon glyphicon-off"
+              type="button"
+              id="dropdownMenuButton"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Dev Ops
+            </button>
+            <div class="dropdown-menu dropdown-child" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="/test">Beware the Minefield</a>
+              <a class="dropdown-item" href="/your_character">Character Show (working)</a>
+              <a class="dropdown-item" href="/dream">Character Sheet Ideal</a>
+            </div>
+          </div>
+          <!-- User Sign-Up/Login -->
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a class="btn btn-info btn-lg" href="/sign_up">
+                <span class="glyphicon glyphicon-upload"></span>
+                <span class="single-space">_</span>
+                <span>Sign-up</span>
+              </a>
+            </li>
+            <li>
+              <a class="btn btn-info btn-lg" href="/login">
+                <span class="glyphicon glyphicon-log-in"></span>
+                <span class="single-space">_</span>
+                <span>Login</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <router-view />
+    </div>
   </div>
 </template>
 
 <style>
 /* From blog: */
-/* All link/text styling INSIDE the NAVBAR class only applies to the navbar-BRAND class! 
+/* All link/text styling INSIDE the NAVBAR class only applies to the navbar-BRAND class!
 but OTHER styling such as background colours etc will apply to the whole navbar
 
 All the links inside the <ul class=”navbar-nav mr-auto nav”> are styled by the nav element itself, trying to change these on the navbar will not work! */
@@ -262,18 +277,59 @@ All the links inside the <ul class=”navbar-nav mr-auto nav”> are styled by t
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #ffffff;
   /* The file needed to be in Cammel case to work ... also I didn't have the .jpg initially o.O */
   /* Also ... do we really want to random this? The Text we're showing on various pages, the brand styling ... at most, we should have all images with the same general Hue, value */
+}
+#background-market {
   background-image: url("~@/assets/Imgs/Backgrounds/BlackMarketEntranceHamsterfly.jpg");
-  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-size: 100% 100%; */
+  background-attachment: local;
+  position: relative;
+  color: #ffffff;
   /* background-repeat: no-repeat; */
   /* background-color: red; */
 }
-
-#navbarDropdown {
+.background-page {
+  background-position: center;
+  background-attachment: local;
+  background-repeat: repeat;
+  position: relative;
   color: #ffffff;
 }
+.background-page::before {
+  content: "";
+  top: 0;
+  left: 0;
+  min-height: 100%;
+  min-width: 100%;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  color: #ffffff;
+  background-image: url("~@/assets/Imgs/Backgrounds/hexellence/hexellence_2X.png");
+  background-size: 25%;
+  /* background-size: 100% 100%; */
+  /* background-color: red; */
+  /* filter: saturate(20%); */
+  /* filter: hue-rotate(10deg); */
+  /* filter: contrast(10%); */
+  filter: brightness(50%);
+  /* filter: invert(100%); */
+}
+/* THIS CHANGES NAVBAR LINK COLORS */
+#navbarDropdown,
+#dropdownMenuLink,
+#dropdownMenuButton {
+  color: #ffffff !important;
+  /* position: relative !important; */
+}
+/* #dropdownMenuLink {
+  color: #ffffff;
+} */
 
 #nav {
   padding: 30px;
@@ -304,6 +360,14 @@ All the links inside the <ul class=”navbar-nav mr-auto nav”> are styled by t
   /* color: #ffffff; */
 }
 
+.navbar-brand {
+  float: left;
+  height: 50px !important;
+  padding: 6px 15px !important;
+  font-size: 18px !important;
+  line-height: 30px !important;
+}
+
 #nav-item {
   font-family: Georgia;
   font-weight: bold;
@@ -330,10 +394,137 @@ All the links inside the <ul class=”navbar-nav mr-auto nav”> are styled by t
   font-size: 20px;
   color: #fff;
 }
+.a:hover {
+  background-color: #ffffff;
+}
+.btn-lg:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btun-primary {
+  color: #ffffff;
+  background-color: #001014;
+  border-color: #00090b;
+}
 .display-3 {
   color: #ffffff;
 }
 .my-4 {
   color: #ffffff;
+}
+.btn-info {
+  color: #fff;
+  /* background-color: #5bc0de;
+  border-color: #46b8da; */
+  background-color: #00090b !important;
+  border-color: #00090b !important;
+}
+.char-create {
+  color: #00090b;
+}
+.single-space {
+  color: rgba(255, 255, 255, 0);
+}
+.dropdown-menu {
+  position: absolute !important;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  font-size: 14px;
+  text-align: left;
+  list-style: none;
+  color: #ffffff !important;
+  background-color: #00090b !important;
+  background-clip: padding-box;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+}
+.dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 0.25rem 1.5rem;
+  clear: both;
+  font-weight: 400;
+  /* color: #212529; */
+  color: #ffffff !important;
+  /* font-size: 20px !important; */
+  font-size: 18px !important;
+  text-align: inherit;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+}
+.banner {
+  padding: 50px;
+  /* size: 100%; */
+  text-align: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-size: 100% 100%; */
+  /* background-size: cover; */
+  /* height: 100%;
+  width: contain; */
+  position: relative;
+  /* background: #1abc9c; */
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("~@/assets/Imgs/Banners/BlackHex50bluer.png"); */
+  /* background-image: url("~@/assets/Imgs/Banners/BlackHex50.png"); */
+  /* filter: saturate(200%); */
+  /* filter: hue-rotate(20deg); */
+  color: white;
+  font-size: 30px;
+}
+.banner::before {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url("~@/assets/Imgs/Banners/BlackHex50.png");
+  background-size: cover;
+  filter: saturate(100%);
+  filter: hue-rotate(10deg);
+  filter: contrast(100%);
+  filter: brightness(75%);
+}
+/* .hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("~@/assets/Imgs/DnDAidLogo.png");
+
+  height: 40%;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+} */
+.hero-image {
+  /* max-width: 100%; */
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 33%;
+  height: auto;
+  filter: saturate(100%) !important;
+  filter: hue-rotate(0%) !important;
+  /* size: 25%; */
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
 }
 </style>

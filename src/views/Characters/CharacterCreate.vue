@@ -6,8 +6,8 @@
     <!-- <div v-for="character in characters" v-bind:key="character.index"> -->
     <!-- I think the above just shows all characters in the table on the page ... but we're showing input fields instead on this page anyway o.O -->
     <div>
-      <p>{{ newCharacterCFirstName }} {{ newCharacterCMiddleName }} {{ newCharacterCLastName }}</p>
-      <section class="page-section cta">
+      <!-- <p>{{ newCharacterCFirstName }} {{ newCharacterCMiddleName }} {{ newCharacterCLastName }}</p> -->
+      <section class="page-section cta char-create">
         <div class="container">
           <div class="row">
             <div class="col-xl-9 mx-auto">
