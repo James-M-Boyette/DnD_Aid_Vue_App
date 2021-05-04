@@ -42,7 +42,8 @@
                       <input type="password" class="form-control" v-model="passwordConfirmation" />
                       <small v-if="passwordConfirmation !== password">Passwords must match</small>
                     </div>
-                    <input type="submit" class="btn btn-primary" value="Submit" />
+                    <button class="submit-button" type="submit" value="Submit">Submit !</button>
+                    <!-- <input type="submit" class="btn btn-primary" value="Submit" /> -->
                   </form>
                 </div>
               </h2>
@@ -108,8 +109,10 @@ export default {
       newULastName: "Your last name",
       email: "Your email",
       // username: "Your username",
-      password: "Your new password",
-      passwordConfirmation: "Please re-type your password",
+      // password: "Your new password",
+      // passwordConfirmation: "Please re-type your password",
+      password: "password",
+      passwordConfirmation: "password",
       errors: [],
     };
   },

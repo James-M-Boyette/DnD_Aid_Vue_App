@@ -180,7 +180,7 @@ section {
 }
 .p-header {
   font-size: 42px;
-  color: #ffffff;
+  color: #111212;
 }
 </style>
 

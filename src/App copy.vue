@@ -236,7 +236,6 @@
       </div>
     </nav>
     <!-- <div :style="image" class="test"></div> -->
-    <router-view />
   </div>
   <!-- </div> -->
 </template>
@@ -253,9 +252,7 @@ All the links inside the <ul class=”navbar-nav mr-auto nav”> are styled by t
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #111010;
-  background-image: url("~@/assets/Imgs/Backgrounds/hexellence/hexellence_2X.png");
-  background-repeat: repeat;
+  color: #ffffff;
   /* The file needed to be in Cammel case to work ... also I didn't have the .jpg initially o.O */
   /* Also ... do we really want to random this? The Text we're showing on various pages, the brand styling ... at most, we should have all images with the same general Hue, value */
 }

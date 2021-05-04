@@ -22,7 +22,8 @@
                     <input type="password" class="form-control" v-model="password" />
                   </div>
                   <!-- <input type="submit" class="btn btn-primary" value="Submit" /> -->
-                  <button type="submit" class="btn btn-primary" value="Submit" />
+                  <button class="submit-button" type="submit" value="Submit">Enter !</button>
+                  <!-- <button type="submit" class="btn btn-primary" value="Submit" /> -->
                 </form>
               </h2>
             </div>
@@ -33,6 +34,12 @@
   </div>
 </template>
 
+<style>
+.submit-button {
+  background-color: slategray;
+  color: white;
+}
+</style>
 <script>
 import axios from "axios";
 
