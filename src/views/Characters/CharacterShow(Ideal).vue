@@ -1,12 +1,13 @@
 <template>
   <div class="ideal">
-    <div class="body"></div>
+    <div class="sheet"></div>
     <!-- <img src="@/assets/Imgs/Backgrounds/Black_Market_Entrance_(Hamsterfly).jpg" /> -->
+    <img class="sheet" height="1500" src="~@/assets/Imgs/CharacterSheets/Clean.jpeg" />
   </div>
 </template>
 
 <style>
-.body {
-  background-image: url("/assets/Imgs/Character_Sheets/Clean.jpeg");
+.sheet {
+  size: 25%;
 }
 </style>

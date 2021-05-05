@@ -254,8 +254,11 @@ All the links inside the <ul class=”navbar-nav mr-auto nav”> are styled by t
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #111010;
+  /* background-color: #e60e0e; */
   background-image: url("~@/assets/Imgs/Backgrounds/hexellence/hexellence_2X.png");
   background-repeat: repeat;
+  /* background-size: cover; */
+
   /* The file needed to be in Cammel case to work ... also I didn't have the .jpg initially o.O */
   /* Also ... do we really want to random this? The Text we're showing on various pages, the brand styling ... at most, we should have all images with the same general Hue, value */
 }

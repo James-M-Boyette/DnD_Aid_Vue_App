@@ -59,7 +59,7 @@
                   <!-- Inventory (ID):
                   <span class="ml-auto list-udetails-r">{{ theCharacter.inventoryid }}</span> -->
                   Inventory:
-                  <span class="ml-auto list-udetails-r">Cloack, Staff, Belt of a poor man ...</span>
+                  <span class="ml-auto list-udetails-r">Cloak, Short Staff, Golden Rod (companion)</span>
                 </li>
                 <li class="list-unstyled-item d-flex list-udetails-l">
                   Strength:
