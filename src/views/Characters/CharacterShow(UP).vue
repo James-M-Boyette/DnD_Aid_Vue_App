@@ -260,14 +260,16 @@ export default {
   created: function () {
     console.log("Fetching this character's info automatically ...");
     console.log(this.$route.params.id);
-    axios.get(`/api/characters/${this.$route.params.id}`).then((response) => {
+    // axios.get(`/api/characters/${this.$route.params.id}`).then((response) => {
+    axios.get(`https://dnd-aid-back-end.herokuapp.com/api/characters/${this.$route.params.id}`).then((response) => {
       console.log(response.data);
       this.theCharacter = response.data;
     });
     console.log("Getting your profile info automatically ...");
     console.log(this.$route.params.id);
     // axios.get(`/api/users/current_user"${this.$route.params.id}`).then((response) => {
-    axios.get("/api/users/current_user").then((response) => {
+    // axios.get("/api/users/current_user").then((response) => {
+    axios.get("https://dnd-aid-back-end.herokuapp.com/api/users/current_user").then((response) => {
       console.log(response.data);
       this.currentUser = response.data;
     });
@@ -276,7 +278,8 @@ export default {
     charactersShow: function (theCharacter) {
       console.log("CharactersShow action is executing ...");
       // Make a GET request to "/api/photos/" + this.$route.params.id
-      axios.get(`/api/characters"${this.$route.params.id}`).then((response) => {
+      // axios.get(`/api/characters"${this.$route.params.id}`).then((response) => {
+      axios.get(`https://dnd-aid-back-end.herokuapp.com/api/characters"${this.$route.params.id}`).then((response) => {
         console.log(response.data);
         this.theCharacter = response.data;
       });
@@ -309,9 +312,12 @@ export default {
         healthtemp: theCharacter.healthtemp,
         speed: theCharacter.speed,
       };
-      axios.patch("/api/characters/" + theCharacter.id, params).then((response) => {
-        console.log(response.data);
-      });
+      // axios.patch("/api/characters/" + theCharacter.id, params).then((response) => {
+      axios
+        .patch("https://dnd-aid-back-end.herokuapp.com/api/characters/" + theCharacter.id, params)
+        .then((response) => {
+          console.log(response.data);
+        });
     },
   },
 };

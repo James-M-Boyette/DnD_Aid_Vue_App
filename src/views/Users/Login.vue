@@ -63,11 +63,13 @@ export default {
         password: this.password,
       };
       axios
-        .post("/api/sessions", params)
+        // .post("/api/sessions", params)
+        .post("https://dnd-aid-back-end.herokuapp.com/api/sessions", params)
         .then((response) => {
           axios.defaults.headers.common["Authorization"] = "Bearer " + response.data.jwt;
           localStorage.setItem("jwt", response.data.jwt);
-          this.$router.push("/user_profile");
+          // this.$router.push("/user_profile");
+          this.$router.push("https://dnd-aid-back-end.herokuapp.com/user_profile");
         })
         .catch((error) => {
           console.log(error.response);

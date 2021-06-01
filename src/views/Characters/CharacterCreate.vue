@@ -317,7 +317,8 @@ export default {
   methods: {
     charactersIndex: function () {
       console.log("charactersIndex action is executing ...");
-      axios.get("http://localhost:3000/api/characters/").then((response) => {
+      // axios.get("http://localhost:3000/api/characters/").then((response) => {
+      axios.get("https://dnd-aid-back-end.herokuapp.com/api/characters/").then((response) => {
         // console.log("Here's the data from our personal database ...");
         // console.log(response.data);
         this.characters = response.data;
@@ -363,7 +364,8 @@ export default {
         healthtemp: this.newCharacterHealthTemp,
         speed: this.newCharacterSpeed,
       };
-      axios.post("http://localhost:3000/api/characters", params).then((response) => {
+      // axios.post("http://localhost:3000/api/characters", params).then((response) => {
+      axios.post("https://dnd-aid-back-end.herokuapp.com/api/characters", params).then((response) => {
         console.log(response.data);
         this.characters.push(response.data);
         this.newCharacterCFirstName = "";

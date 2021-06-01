@@ -184,7 +184,8 @@ export default {
   methods: {
     charactersIndex: function () {
       console.log("charactersIndex action is executing ...");
-      axios.get("http://localhost:3000/api/characters/").then((response) => {
+      // axios.get("http://localhost:3000/api/characters/").then((response) => {
+      axios.get("https://dnd-aid-back-end.herokuapp.com/api/characters/").then((response) => {
         // console.log("Here's the data from our personal database ...");
         // console.log(response.data);
         this.characters = response.data;
@@ -200,7 +201,8 @@ export default {
       // });
     },
     theUser: function () {
-      axios.get("/api/users/current_user").then((response) => {
+      // axios.get("/api/users/current_user").then((response) => {
+      axios.get("https://dnd-aid-back-end.herokuapp.com/api/users/current_user").then((response) => {
         console.log(response.data);
         // current_user's info is stored in var currentUser
         this.the_User = response.data;

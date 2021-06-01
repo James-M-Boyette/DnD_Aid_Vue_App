@@ -126,7 +126,8 @@ export default {
         password_confirmation: this.passwordConfirmation,
       };
       axios
-        .post("/api/users", params)
+        // .post("/api/users", params)
+        .post("https://dnd-aid-back-end.herokuapp.com/api/users", params)
         .then((response) => {
           console.log(response.data);
           this.$router.push("/login");
