@@ -97,7 +97,8 @@ export default {
   methods: {
     alignmentsIndex: function () {
       console.log("alignmentsIndex action is executing ...");
-      axios.get("http://localhost:3000/api/alignments/").then((response) => {
+      // axios.get("/api/alignments/").then((response) => {
+      axios.get("https://dnd-aid-back-end.herokuapp.com/api/alignments/").then((response) => {
         // console.log("Here's the data from our personal database ...");
         // console.log(response.data);
         this.alignments = response.data;

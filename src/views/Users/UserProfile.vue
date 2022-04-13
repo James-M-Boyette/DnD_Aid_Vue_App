@@ -202,7 +202,8 @@ export default {
   created: function () {
     console.log("Getting your profile info automatically ...");
     // Get request for current_user's info
-    axios.get("/api/users/current_user").then((response) => {
+    // axios.get("/api/users/current_user").then((response) => {
+    axios.get("https://dnd-aid-back-end.herokuapp.com/api/users/current_user").then((response) => {
       console.log(response.data);
       // current_user's info is stored in var currentUser
       this.currentUser = response.data;
@@ -234,7 +235,8 @@ export default {
       //   console.log(response.data);
       // });
       axios
-        .patch("/api/users/current_user/", params)
+        // .patch("/api/users/current_user/", params)
+        .patch("https://dnd-aid-back-end.herokuapp.com/api/users/current_user/", params)
         .then((response) => {
           console.log(response.data);
         })
@@ -245,7 +247,8 @@ export default {
     },
     userDestory: function () {
       console.log("Deleting user ...");
-      axios.delete("http://localhost:3000/api/users/current_user/").then((response) => {
+      // axios.delete("/api/users/current_user/").then((response) => {
+      axios.delete("https://dnd-aid-back-end.herokuapp.com/api/users/current_user/").then((response) => {
         console.log(response.data);
         // var index = this.users.indexOf(theUser);
         // this.users.splice(index, 1);

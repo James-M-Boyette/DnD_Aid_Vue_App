@@ -12,6 +12,8 @@ import Login from "../views/Users/Login.vue";
 import Logout from "../views/Users/Logout.vue";
 import Test from "../views/Test.vue";
 import UserProfile from "../views/Users/UserProfile.vue";
+// import NoPage from "../views/404.vue";
+// import NoPage from "../views/404.vue";
 
 Vue.use(VueRouter);
 
@@ -84,6 +86,16 @@ const routes = [
     path: "/test",
     name: "test",
     component: Test,
+  },
+  // {
+  //   path: "/*",
+  //   name: "404",
+  //   component: NoPage,
+  // },
+  {
+    path: "/*",
+    name: "Home",
+    component: Home,
   },
 ];
 
