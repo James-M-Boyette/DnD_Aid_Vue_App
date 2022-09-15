@@ -1,7 +1,10 @@
 <template>
   <div id="app">
     <!-- <div :style="image" class="test"> -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+    />
     <!-- <div class="background-page" style="z-index: -10"> -->
     <!-- <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script> -->
     <!-- Google fonts-->
@@ -14,7 +17,11 @@
     <!-- <link href="css/styles.css" rel="stylesheet" /> -->
     <div class="banner">
       <!-- <img class="hero-image" src="~@/assets/Imgs/DnDAidLogo.png" alt="" /> -->
-      <img class="hero-image" src="~@/assets/Imgs/DnDAidLogo.png" href="/home" />
+      <img
+        class="hero-image"
+        src="~@/assets/Imgs/DnDAidLogo.png"
+        href="/home"
+      />
       <!-- <button class="hero-image"></button> -->
     </div>
     <!-- This is A potential "first" / "header" bar w logo, social media etc -->
@@ -44,7 +51,13 @@
 
         <!-- Navbar Brand Logo -->
         <a class="navbar-brand button" href="/home">
-          <img src="./assets/Logo1_(small).png" href="/home" alt="" width="110" height="40" />
+          <img
+            src="./assets/Logo1_(small).png"
+            href="/home"
+            alt=""
+            width="110"
+            height="40"
+          />
         </a>
         <!-- test test -->
         <!-- <div class="dropdown">
@@ -76,9 +89,12 @@
             aria-haspopup="true"
             aria-expanded="false"
           >
-            Home
+            Home!
           </button>
-          <div class="dropdown-menu dropdown-child" aria-labelledby="dropdownMenuButton">
+          <div
+            class="dropdown-menu dropdown-child"
+            aria-labelledby="dropdownMenuButton"
+          >
             <a class="dropdown-item" href="/home">Home</a>
             <a class="dropdown-item" href="/about">About</a>
           </div>
@@ -95,7 +111,10 @@
           >
             Users
           </button>
-          <div class="dropdown-menu dropdown-child" aria-labelledby="dropdownMenuButton">
+          <div
+            class="dropdown-menu dropdown-child"
+            aria-labelledby="dropdownMenuButton"
+          >
             <a class="dropdown-item" href="/sign_up">Join!</a>
             <hr class="dropdown-divider" />
             <a class="dropdown-item" href="/login">Log In</a>
@@ -117,9 +136,14 @@
           >
             Characters
           </button>
-          <div class="dropdown-menu dropdown-child" aria-labelledby="dropdownMenuButton">
+          <div
+            class="dropdown-menu dropdown-child"
+            aria-labelledby="dropdownMenuButton"
+          >
             <a class="dropdown-item" href="/characters">View Your Characters</a>
-            <a class="dropdown-item" href="/character_create">Createa New Character</a>
+            <a class="dropdown-item" href="/character_create"
+              >Createa New Character</a
+            >
           </div>
         </div>
         <!-- glyphicon glyphicon-user -->
@@ -135,7 +159,10 @@
           >
             Campaigns
           </button>
-          <div class="dropdown-menu dropdown-child" aria-labelledby="dropdownMenuButton">
+          <div
+            class="dropdown-menu dropdown-child"
+            aria-labelledby="dropdownMenuButton"
+          >
             <a class="dropdown-item" href="/test">Create a Campaign!</a>
             <a class="dropdown-item" href="/test">Join, Resume, Leave</a>
           </div>
@@ -152,7 +179,10 @@
           >
             Parties
           </button>
-          <div class="dropdown-menu dropdown-child" aria-labelledby="dropdownMenuButton">
+          <div
+            class="dropdown-menu dropdown-child"
+            aria-labelledby="dropdownMenuButton"
+          >
             <a class="dropdown-item" href="/test">Create a Party!</a>
             <a class="dropdown-item" href="/test">Join, Resume, Leave</a>
           </div>
@@ -184,13 +214,46 @@
           >
             Encyclopedia
           </button>
-          <div class="dropdown-menu dropdown-child" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="https://www.dndbeyond.com/spells" target="_blank">Spells</a>
-            <a class="dropdown-item" href="https://www.dndbeyond.com/items" target="_blank">Items</a>
-            <a class="dropdown-item" href="https://www.dndbeyond.com/classes" target="_blank">Classes</a>
-            <a class="dropdown-item" href="https://www.dndbeyond.com/races" target="_blank">Races</a>
-            <a class="dropdown-item" href="https://www.dndbeyond.com/feats" target="_blank">Feats</a>
-            <a class="dropdown-item" href="https://www.dndbeyond.com/backgrounds" target="_blank">Backgrounds</a>
+          <div
+            class="dropdown-menu dropdown-child"
+            aria-labelledby="dropdownMenuButton"
+          >
+            <a
+              class="dropdown-item"
+              href="https://www.dndbeyond.com/spells"
+              target="_blank"
+              >Spells</a
+            >
+            <a
+              class="dropdown-item"
+              href="https://www.dndbeyond.com/items"
+              target="_blank"
+              >Items</a
+            >
+            <a
+              class="dropdown-item"
+              href="https://www.dndbeyond.com/classes"
+              target="_blank"
+              >Classes</a
+            >
+            <a
+              class="dropdown-item"
+              href="https://www.dndbeyond.com/races"
+              target="_blank"
+              >Races</a
+            >
+            <a
+              class="dropdown-item"
+              href="https://www.dndbeyond.com/feats"
+              target="_blank"
+              >Feats</a
+            >
+            <a
+              class="dropdown-item"
+              href="https://www.dndbeyond.com/backgrounds"
+              target="_blank"
+              >Backgrounds</a
+            >
           </div>
         </div>
 
@@ -210,9 +273,14 @@
           >
             Dev Ops
           </button>
-          <div class="dropdown-menu dropdown-child" aria-labelledby="dropdownMenuButton">
+          <div
+            class="dropdown-menu dropdown-child"
+            aria-labelledby="dropdownMenuButton"
+          >
             <a class="dropdown-item" href="/test">Beware the Minefield</a>
-            <a class="dropdown-item" href="/your_character">Character Show (working)</a>
+            <a class="dropdown-item" href="/your_character"
+              >Character Show (working)</a
+            >
             <a class="dropdown-item" href="/ideal">Character Sheet Ideal</a>
           </div>
         </div>

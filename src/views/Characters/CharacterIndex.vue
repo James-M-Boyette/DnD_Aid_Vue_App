@@ -21,6 +21,7 @@
     </div>
     <div class="container">
       <div class="row">
+      <!-- Loop for Index of characters -->
         <div v-for="character in characters" v-bind:key="character.index">
           <!-- <router-link v-bind:to="`/characters/${character.id}`"></router-link> -->
           <div class="col-lg-3 col-md-6 mb-4">
